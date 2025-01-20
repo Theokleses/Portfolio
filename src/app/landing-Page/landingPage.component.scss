@@ -1,10 +1,73 @@
 section {
-    height: 100vh;
-    background-color: #141D2F;
-    background-image: url('/../assets/img/shadow.png');
-    
-    width: 100%;
-    >img{
-        height: 705px;
-    }
+  height: 100vh;
+  background-color: #141d2f;
+  background-image: url("/../assets/img/shadow.png");
+  background-repeat: no-repeat;
+  background-position: -70px 147px;
+  background-size: contain; /* Optional: Bild anpassen */
+  > img {
+  }
+}
+
+.first-sektion {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  height: 705px;
+  padding-left: 100px;
+  padding-left: 50px;
+  margin-top: -29px;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins";
+  padding-right: 100px;
+  line-height: 80px;
+}
+
+.Iam {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  font-size: 64px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: -150px;
+}
+
+.name-job {
+  > .name {
+    font-size: 90px;
+    font-weight: 700;
+  }
+  > .job {
+    font-size: 77px;
+    color: #9747ff;
+  }
+}
+
+button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #70E61C;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  border: none; 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #9747FF;
+  transform: scale(1.05);
+} 
+.center-button {
+  // display: flex;
+  padding-top: 10px;
 }

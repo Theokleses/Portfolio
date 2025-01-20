@@ -1,51 +1,44 @@
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141d2f;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  > p {
+    > a {
+      font-size: 35px;
+    }
+  }
+  > div {
     display: flex;
-    justify-content: space-between;
+    gap: 29px;
     align-items: center;
-    background-color: #141D2F;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 37px;
-    padding-bottom: 37px;
-    >p{
-        >a{
-            height: 35px;
-          font-size: x-large;
-        }
+
+    > a {
+      &:hover {
+        color: #70e61c;
+      }
+      //    height: 23px;
+      font-size: 23px;
     }
-    >div{
-        display: flex;
-        gap: 29px;
-        align-items: center;
-     
-
-        >a{
-            &:hover{
-                color: #70E61C;
-            }
-        //    height: 23px;
-        // font-size: 23px;
-        font-size: small;
-        }
-    }
-
-
+  }
 }
-a{
-    text-decoration: none;
-    color: white;
-   
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .split-n {
-    background: linear-gradient(to right, white 50%, #70E61C 50%);
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to right, white 50%, #70e61c 50%);
+  background-clip: text;
+  color: transparent;
 }
 
 .split-o {
-    background: linear-gradient(to right, #7C28BD 60%, white 40%);
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to right, #7c28bd 60%, white 40%);
+  background-clip: text;
+  color: transparent;
 }
-
