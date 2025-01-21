@@ -23,6 +23,19 @@ import { NavbarComponent } from './navbar/navbar.component';
     </div> 
   </div>
   </div>
+  <div class="first-kontakt">
+  <div class="left-sektion">  
+  <hr class="styled-line">
+  <a class="icons" href=""><img src="./assets/img/github.png"></a>
+  <a class="icons" href=""><img src="./assets/img/mail.png"></a>
+  <a class="icons" href=""><img src="./assets/img/linked.png"></a>
+  <p>osahonschmolze222&#64;gmail.com</p>
+</div>
+  <div class="scroll-down">
+  <span>Scroll down</span>
+  <img class="arrow" src="./assets/img/arrow.png">
+  </div>
+  </div>  
     </section>
     `,
     styleUrls:['./landingPage.component.scss']

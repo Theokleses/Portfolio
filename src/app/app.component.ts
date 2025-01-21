@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LandPageComponent } from './landing-Page/landingPage.component';
+import { LandPageComponent } from './main-content/landing-page/landingPage.component';
 
 
 @Component({
