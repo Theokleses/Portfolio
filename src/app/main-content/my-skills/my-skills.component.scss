@@ -1,0 +1,90 @@
+@import "../../../styles.scss";
+section {
+  background-color: #1a2743;
+  background-color: #27334b;
+  background-color: #141d2f;
+  padding-top: 100px;
+//   padding-left: 100px;
+//   display: flex;
+//   justify-content: space-between;
+  padding-bottom: 200px;
+}
+
+p {
+  font-weight: bold;
+}
+.mySkills-text {
+  > p {
+    text-align: end;
+  }
+}
+.dp-flex{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+.main-name {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+.normal-text {
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 20px;
+  max-width: 500px;
+}
+.styled-text {
+  font-weight: 700;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+.right {
+  display: flex;
+  gap: 30px;
+}
+.highlight {
+  color: #9747ff; 
+  font-weight: bold;
+}
+.rightb {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+.firstIcon-line {
+  display: flex;
+  gap: 100px;
+  text-align: center;
+  align-items: center;
+  max-width: 150px;
+  margin: 25px;
+}
+.line-heigth {
+    padding-top: 70px
+}
+
+.styled-line {
+  @include styled-line(150px);
+}
+
+// .mySkills-text{
+//     display: flex;
+// }
+
+.icon-container img {
+  transition: transform 0.3s ease;
+}
+
+.icon-container:hover img {
+  transform: translateY(-10px);
+}
+
+.shadow-image {
+    display: flex;
+    justify-content: start;
+    margin-top: -300px;
+    z-index: 1;
+    position: relative;
+  }
+  

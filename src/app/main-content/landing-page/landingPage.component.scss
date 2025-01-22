@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 section {
   font-family: 'Poppins';
   height: 100vh;
@@ -7,6 +9,8 @@ section {
   background-position: center 220px, -70px 147px;
   background-size: cover, contain; 
 }
+
+
 
 .first-sektion {
   display: flex;
@@ -38,34 +42,12 @@ section {
 }
 
 .name-job {
-  > .name {
-    font-size: 90px;
-    font-weight: 700;
-  }
+  
   > .job {
     font-size: 77px;
     color: #9747ff;
   }
 }
-
-button {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 10px;
-  background-color: #70E61C;
-  color: white;
-  cursor: pointer;
-  font-family: 'Poppins';
-  border: none; 
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #9747FF;
-  transform: scale(1.05);
-} 
 
 .icons {
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -79,11 +61,7 @@ button:hover {
 }
 
 .styled-line{
-  border: none;
-  border-radius: 5px;
-  background-color: #9747FF;
-  height: 5px; 
-  width: 100px; 
+  @include styled-line(150px)
 }
 .first-kontakt {
   display: flex;
@@ -94,6 +72,8 @@ button:hover {
   color: white;
   margin-top: 50px;
   justify-content: space-between;
+  // z-index: 1;
+  // position: absolute;
 }
 
 .scroll-down {

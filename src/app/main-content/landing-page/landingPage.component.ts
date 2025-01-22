@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     <div class="text-container">
     <div class="name-job">
     <span class="Iam">I am</span>
-    <p class="name">Osahon Schmolze</p>
+    <p class="main-name">Osahon Schmolze</p>
     <p class="job">FRONTEND DEVELOPER</p>
     </div> 
     <div class="center-button">

@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+h1 {
+  display: flex;
+  justify-content: center;
+}
+section {
+  position: relative;
+  margin-top: -700px;
+}
+p {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.styled-line {
+  @include styled-line(100px);
+}
+
+.line-heigth {
+  padding-top: 10px;
+}
+
+.portfilio-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
