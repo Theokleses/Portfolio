@@ -6,12 +6,85 @@ h1 {
 section {
   position: relative;
   margin-top: -700px;
+  background-image: url("/../assets/img/second-purpel-shadow.png");
+  background-repeat: no-repeat;
+  background-position: -200px  880px ;
 }
-p {
-  text-align: center;
-  padding-top: 20px;
+h2 {
+  color: #9747ff;
+  font-weight: 700;
+  font-size: 32px;
+}
+button {
+  transform: none;
+}
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 90px;
+}
+.buttons-reverse {
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+  gap: 90px;
+}
+.span-gap {
+  padding-bottom: 20px;
+  color: #70e61c;
+  font-size: 23px;
+  font-weight: 400;
 }
 
+.livetest-button {
+  background-color: #9747ff;
+  &:hover {
+    background-color: #70e61c;
+  }
+}
+.github-button {
+  background-color: transparent;
+  border: 2px solid #70e61c;
+  &:hover {
+    background-color: #70e61c;
+  }
+}
+.reverse-portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+  flex-direction: row-reverse;
+}
+
+.normal-portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+.mg-bt {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.portfolio-description {
+  max-width: 450px;
+  margin-top: -30px;
+}
+.portfolio-description-reverse {
+  max-width: 450px;
+  margin-top: -30px;
+  text-align: end;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .styled-line {
   @include styled-line(100px);
 }
@@ -20,9 +93,9 @@ p {
   padding-top: 10px;
 }
 
-.portfilio-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+.portfilio-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }

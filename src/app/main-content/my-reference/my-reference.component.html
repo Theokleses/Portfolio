@@ -1,1 +1,52 @@
-<p>my-reference works!</p>
+<!-- <section>
+  <div class="reference-section">
+    <div class="reference-gallery">
+      <img [src]="images[currentIndex]" alt="Current-Reference" />
+      <div class="arrow-section">
+        <img class="pd-r"
+          (click)="previousImage()"
+          src="/assets/img/arrow-left.png"
+          alt="Left-Arrow"
+        />
+        <img
+          [src]="numberimages[currentIndexNumber]"
+          alt="Current-DotReference"
+        />
+        <img class="pd-l"
+          (click)="nextImage()"
+          src="/assets/img/arrow-right.png"
+          alt="Right-Arrow"
+        />
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section>
+    <div class="reference-section">
+      <div class="reference-gallery">
+        <img [src]="images[currentIndex]" alt="Current-Reference" />
+        <div class="arrow-section">
+          <img class="pd-r"
+            (click)="previousImage()"
+            (mouseover)="hoverArrow('left', true)"
+            (mouseout)="hoverArrow('left', false)"
+            [src]="leftArrowSrc"
+            alt="Left-Arrow"
+          />
+          <img
+            [src]="numberimages[currentIndexNumber]"
+            alt="Current-DotReference"
+          />
+          <img class="pd-l"
+            (click)="nextImage()"
+            (mouseover)="hoverArrow('right', true)"
+            (mouseout)="hoverArrow('right', false)"
+            [src]="rightArrowSrc"
+            alt="Right-Arrow"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
