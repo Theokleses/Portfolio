@@ -8,40 +8,37 @@ import { Component } from '@angular/core';
   styleUrl: './my-reference.component.scss',
 })
 export class MyReferenceComponent {
-  images: string[] = [
-    'assets/img/first-reference.png',
-    'assets/img/second-reference.png',
-    'assets/img/third-reference.png',
+  references = [
+    {
+      image: 'assets/img/first-reference.png',
+      numberImage: 'assets/img/firstimg-ref.png',
+    },
+    {
+      image: 'assets/img/second-reference.png',
+      numberImage: 'assets/img/secondimg-ref.png',
+    },
+    {
+      image: 'assets/img/third-reference.png',
+      numberImage: 'assets/img/thirdimg-ref.png',
+    },
   ];
-  numberimages: string[] = [
-    'assets/img/firstimg-ref.png',
-    'assets/img/secondimg-ref.png',
-    'assets/img/thirdimg-ref.png',
-  ];
+
 
   currentIndex: number = 0;
-  currentIndexNumber: number = 0;
 
-  // Pfeil-Bilder
   leftArrowSrc = '/assets/img/arrow-left.png';
   rightArrowSrc = '/assets/img/arrow-right.png';
 
-  // Hover-Bilder
   leftArrowHover = '/assets/img/arrow-left-hover.png';
   rightArrowHover = '/assets/img/arrow-right-hover.png';
 
   nextImage(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    this.currentIndexNumber =
-      (this.currentIndexNumber + 1) % this.numberimages.length;
+    this.currentIndex = (this.currentIndex + 1) % this.references.length;
   }
 
   previousImage(): void {
     this.currentIndex =
-      (this.currentIndex - 1 + this.images.length) % this.images.length;
-    this.currentIndexNumber =
-      (this.currentIndexNumber - 1 + this.numberimages.length) %
-      this.numberimages.length;
+      (this.currentIndex - 1 + this.references.length) % this.references.length;
   }
 
   hoverArrow(direction: 'left' | 'right', isHovering: boolean) {
@@ -52,3 +49,6 @@ export class MyReferenceComponent {
     }
   }
 }
+
+
+

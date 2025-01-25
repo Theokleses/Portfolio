@@ -1,28 +1,4 @@
 <!-- <section>
-  <div class="reference-section">
-    <div class="reference-gallery">
-      <img [src]="images[currentIndex]" alt="Current-Reference" />
-      <div class="arrow-section">
-        <img class="pd-r"
-          (click)="previousImage()"
-          src="/assets/img/arrow-left.png"
-          alt="Left-Arrow"
-        />
-        <img
-          [src]="numberimages[currentIndexNumber]"
-          alt="Current-DotReference"
-        />
-        <img class="pd-l"
-          (click)="nextImage()"
-          src="/assets/img/arrow-right.png"
-          alt="Right-Arrow"
-        />
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<section>
     <div class="reference-section">
       <div class="reference-gallery">
         <img [src]="images[currentIndex]" alt="Current-Reference" />
@@ -48,5 +24,43 @@
         </div>
       </div>
     </div>
-  </section>
-  
+  </section> -->
+
+<section>
+  <div class="shadow-image">
+    <img src="/../assets/img/greenshadow-two.png" alt="Green-Shadow" />
+  </div>
+  <div class="reference-section">
+    <div class="reference-gallery">
+      <div class="ref-icon">
+        <img src="assets/img/reference-icon.png" alt="Reference-Icon" />
+      </div>
+      <div class="line-height">
+      <img [src]="references[currentIndex].image" alt="Current-Reference" />
+        <hr class="styled-line" />
+      </div>
+      <div class="arrow-section">
+        <img
+          class="pd-r"
+          (click)="previousImage()"
+          (mouseover)="hoverArrow('left', true)"
+          (mouseout)="hoverArrow('left', false)"
+          [src]="leftArrowSrc"
+          alt="Left-Arrow"
+        />
+        <img
+          [src]="references[currentIndex].numberImage"
+          alt="Current-DotReference"
+        />
+        <img
+          class="pd-l"
+          (click)="nextImage()"
+          (mouseover)="hoverArrow('right', true)"
+          (mouseout)="hoverArrow('right', false)"
+          [src]="rightArrowSrc"
+          alt="Right-Arrow"
+        />
+      </div>
+    </div>
+  </div>
+</section>
