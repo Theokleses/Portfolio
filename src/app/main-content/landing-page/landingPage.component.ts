@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     standalone: true,
     imports: [CommonModule,NavbarComponent,],
     template:`
-    <section>
+    <section id="landing-page">
     <app-navbar></app-navbar>
     <div class="first-sektion">
     <img src="./assets/img/file.png">

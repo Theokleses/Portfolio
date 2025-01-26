@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class MyContactComponent {
 
+  upArrowSrc = '/assets/img/arrow-up.png';
+  upArrowHover = '/assets/img/arrow-up-hover.png';
+
+ 
+  hoverArrow(direction: 'up', isHovering: boolean) {
+    if (direction === 'up') {
+      this.upArrowSrc = isHovering ? this.upArrowHover : '/assets/img/arrow-up.png';
+    } 
+  }
+
 }

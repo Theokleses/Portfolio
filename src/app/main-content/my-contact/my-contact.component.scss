@@ -1,0 +1,126 @@
+@import "../../../styles.scss";
+
+section {
+  padding-top: 130px;
+  background-image: url("/../assets/img/third-purpel-shadow.png");
+  background-repeat: no-repeat;
+  background-position: -110px 400px;
+  background-size: contain;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+input {
+  font-family: "Poppins";
+  color: white;
+  &:hover {
+    cursor: pointer;
+    border-color: #70e61c;
+  }
+}
+.contact-text {
+  max-width: 480px;
+  > p {
+    padding-top: 15px;
+  }
+}
+.my-contact {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 150px;
+}
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  gap: 30px;
+}
+.contact-line {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 35px; 
+  width: 60%;
+}
+.styled-input::placeholder {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.styled-line {
+  flex-grow: 1;
+  height: 5px;
+  border: none;
+  background-color: #9747ff;
+}
+.styled-input {
+  width: 100%; 
+  padding: 15px 25px;
+  border: 2px solid #9747ff;
+  border-radius: 10px;
+  background-color: #141d2f;
+}
+.input-wrapper {
+  position: relative; 
+  width: 100%; 
+}
+.input-icon {
+  position: absolute; 
+  bottom: 10px; 
+  right: 10px; 
+}
+
+.pd-bot {
+  padding-bottom: 150px;
+}
+
+.privacy-policy {
+  display: flex;
+  //   align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  max-width: 600px;
+}
+.privacy-line {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+  padding-bottom: 40px;
+}
+.privacy-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.highlight {
+  color: #9747ff;
+}
+.arrow-up {
+  display: flex;
+  justify-content: end;
+  margin-right: -20px;
+  padding-bottom: 100px;
+  > a {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.green-line {
+  background-color: #70e61c;
+  width: 100%;
+  height: 4px;
+  border: none;
+}
+
+
+

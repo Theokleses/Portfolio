@@ -1,5 +1,7 @@
 *{
     margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
   font-family: 'Poppins';
@@ -8,6 +10,11 @@ body{
 section {
   background-color: #141d2f;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+
 h1 {
   font-weight: 700;
   font-size: 90px;
@@ -44,6 +51,25 @@ button:hover {
   background-color: #9747FF;
   height: 5px;
   width: $width;
+}
+
+.split-n {
+  background: linear-gradient(to right, white 50%, #70e61c 50%);
+  background-clip: text;
+  color: transparent;
+}
+
+.split-o {
+  background: linear-gradient(to right, #7c28bd 60%, white 40%);
+  background-clip: text;
+  color: transparent;
+}
+
+.icons {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 

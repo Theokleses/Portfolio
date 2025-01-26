@@ -48,6 +48,8 @@ export class MyReferenceComponent {
       this.rightArrowSrc = isHovering ? this.rightArrowHover : '/assets/img/arrow-right.png';
     }
   }
+
+
 }
 
 

@@ -1,0 +1,29 @@
+@import "../../../styles.scss";
+section {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  font-size: 35px;
+}
+
+.styled-name {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 15px;
+  > p {
+    font-weight: normal;
+    font-size: 12px;
+  }
+}
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+
