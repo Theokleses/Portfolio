@@ -13,6 +13,11 @@ h2 {
   font-size: 32px;
   padding-bottom: 20px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 input {
   font-family: "Poppins";
   color: white;
@@ -33,12 +38,9 @@ input {
   padding-top: 50px;
   gap: 150px;
 }
-.contact-input {
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  gap: 30px;
-}
+// .contact-input {
+//   // width: 33%;
+// }
 .contact-line {
   display: flex;
   align-items: center; 
@@ -99,6 +101,9 @@ input {
   align-items: center;
   gap: 10px;
   margin-bottom: 30px;
+  >img:hover {
+    cursor: pointer;
+  }
 }
 .highlight {
   color: #9747ff;
@@ -122,5 +127,13 @@ input {
   border: none;
 }
 
+button:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed;  
+  opacity: 0.6;         
+  // pointer-events: none; 
+  transition: none; 
+  transform: none;
+}
 
 

@@ -13,10 +13,12 @@
       <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
       <div class="contact-input">
-        <input class="styled-input" type="text" placeholder="Your name" />
-        <input class="styled-input" type="text" placeholder="Your email" />
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input [(ngModel)]="contactData.name" name="name" class="styled-input" type="text" id="name" placeholder="Your name" required/>
+
+        <input [(ngModel)]="contactData.email" name="email" class="styled-input" type="text" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
         <div class="input-wrapper">
-          <input class="styled-input pd-bot" type="text" placeholder="Your message" />
+          <input [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" id="email" placeholder="Your message" required/>
           <span class="input-icon">
             <img src="./assets/img/input-icon.png" alt="Input-Icon" />
           </span>
@@ -24,12 +26,12 @@
       <div class="privacy-policy">
         <div class="privacy-line">
             <div class="privacy-text">
-          <img src="./assets/img/click-box.png" alt="Click-Box" />
+          <img (click)="clickBox()" [src]="clickBoxSrc"alt="Click-Box" />
           <p>
             I've read the <span class="highlight">privacy policy</span> and agree to the processing of my data as outlined.
           </p>
         </div>
-          <button>Send message &#58;&#41;</button>
+          <button [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
         </div>
         <div class="arrow-up">
         <a href="#landing-page">  
@@ -40,6 +42,7 @@
           </a>
         </div>
       </div>
+    </form>
     </div>
   </div>
     <hr class="green-line" />
