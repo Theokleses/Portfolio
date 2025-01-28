@@ -14,15 +14,42 @@
     </div>
       <div class="contact-input">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <input [(ngModel)]="contactData.name" name="name" class="styled-input" type="text" id="name" placeholder="Your name" required/>
+          <div class="input-wrapper">
+        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" class="styled-input" type="text" placeholder="Your name" required/>
+          @if(!name.valid && name.touched){
+            <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
+            <span>Your name is required</span>
+          } 
+          @if (name.valid && name.value) {
+            <img src="./assets/img/submit-icon.png" class="success-icon" alt="Submit">
+          }
+        </div>
 
-        <input [(ngModel)]="contactData.email" name="email" class="styled-input" type="text" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
         <div class="input-wrapper">
-          <input [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" id="email" placeholder="Your message" required/>
+        <input #mail="ngModel" [(ngModel)]="contactData.email" name="email" class="styled-input" type="text" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+          @if(!mail.valid && mail.touched){
+            <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
+            <span>Your mail is required</span>
+          }
+          @if (mail.valid && mail.value) {
+            <img src="./assets/img/submit-icon.png" class="success-icon" alt="Submit">
+          }
+        </div>
+
+        <div class="input-wrapper">
+          <input #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" id="email" placeholder="Your message" required/>
+          @if (!message.valid && message.touched) { 
+            <img src="./assets/img/error-icon.png" class="error-icon-message" alt="Error">
+            <span>{{ !message.value ? 'Your message is empty' : (message.value.length < 4 ? 'At least 4 letters!' : '') }}</span>
+          }
+          @if (message.valid && message.value) {
+            <img src="./assets/img/submit-icon.png" class="success-icon-message" alt="Submit">
+          }
           <span class="input-icon">
             <img src="./assets/img/input-icon.png" alt="Input-Icon" />
           </span>
         </div>
+
       <div class="privacy-policy">
         <div class="privacy-line">
             <div class="privacy-text">
@@ -31,7 +58,7 @@
             I've read the <span class="highlight">privacy policy</span> and agree to the processing of my data as outlined.
           </p>
         </div>
-          <button [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
+          <button type="submit" [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
         </div>
         <div class="arrow-up">
         <a href="#landing-page">  

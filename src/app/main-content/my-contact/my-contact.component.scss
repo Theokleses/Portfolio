@@ -13,19 +13,46 @@ h2 {
   font-size: 32px;
   padding-bottom: 20px;
 }
+span {
+  margin-top: -23px;
+  color: red;
+  font-size: 12px;
+}
 form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+// input {
+//   font-family: "Poppins";
+//   color: white;
+//   &:hover {
+//     cursor: pointer;
+//     border-color: #70e61c;
+//   }
+//   :focus {
+//     outline: none; /* Entfernt nur den Standard-Fokusrahmen */
+//   }
+// }
+
 input {
   font-family: "Poppins";
   color: white;
+  background-color: transparent;
+  border: 1px solid transparent; /* Setze eine Standardfarbe für den Rahmen */
+  transition: all 0.3s ease; /* Für weiche Übergänge */
+
   &:hover {
     cursor: pointer;
-    border-color: #70e61c;
+    border-color: #70e61c; /* Rahmenfarbe bei Hover */
+  }
+
+  &:focus {
+    border-color: #70e61c; /* Rahmenfarbe bei Fokus */
+    outline: none; /* Entfernt den Standard-Fokusrahmen */
   }
 }
+
 .contact-text {
   max-width: 480px;
   > p {
@@ -65,11 +92,14 @@ input {
   border: 2px solid #9747ff;
   border-radius: 10px;
   background-color: #141d2f;
+  &.ng-touched.ng-invalid {
+    border-color: red;
+  }
 }
-.input-wrapper {
-  position: relative; 
-  width: 100%; 
-}
+// .input-wrapper {
+//   position: relative; 
+//   width: 100%; 
+// }
 .input-icon {
   position: absolute; 
   bottom: 10px; 
@@ -136,4 +166,41 @@ button:disabled {
   transform: none;
 }
 
+.input-wrapper {
+  position: relative; 
+}
 
+.error-icon {
+  position: absolute;
+  right: 25px; 
+  top: 35%;
+  transform: translateY(-50%);
+  width: 28px; 
+  height: 28px;
+}
+
+.success-icon {
+  position: absolute;
+  right: 25px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px; 
+  height: 28px;
+}
+.error-icon-message{
+  position: absolute;
+  right: 25px; 
+  top: 13%;
+  transform: translateY(-50%);
+  width: 28px; 
+  height: 28px;
+}
+.success-icon-message {
+  position: absolute;
+  right: 25px; 
+  top: 13%;
+  transform: translateY(-50%);
+  width: 28px; 
+  height: 28px;
+
+}
