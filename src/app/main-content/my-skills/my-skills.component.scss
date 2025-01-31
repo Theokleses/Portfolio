@@ -4,9 +4,6 @@ section {
   background-color: #27334b;
   background-color: #141d2f;
   padding-top: 100px;
-//   padding-left: 100px;
-//   display: flex;
-//   justify-content: space-between;
   padding-bottom: 200px;
 }
 
@@ -14,14 +11,14 @@ p {
   font-weight: bold;
 }
 .mySkills-text {
+  width: 500px;
   > p {
     text-align: end;
   }
 }
 .dp-flex{
     display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
+    justify-content: space-around;
     z-index: 2;
     position: relative;
 }
@@ -34,7 +31,7 @@ p {
   font-weight: 400;
   font-size: 16px;
   padding-bottom: 20px;
-  max-width: 500px;
+  min-width: 500px;
 }
 .styled-text {
   font-weight: 700;
@@ -56,11 +53,13 @@ p {
 }
 .firstIcon-line {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   text-align: center;
   align-items: center;
-  max-width: 150px;
-  margin: 25px;
+  justify-content: flex-start;
+  max-width: 50%;
+  flex-flow: row wrap;
+  width: 550px;
 }
 .line-heigth {
     padding-top: 70px
@@ -74,6 +73,15 @@ p {
 //     display: flex;
 // }
 
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  > p {
+    padding-top: 5px ;
+  }
+}
 .icon-container img {
   transition: transform 0.3s ease;
 }
@@ -81,6 +89,23 @@ p {
 .icon-container:hover img {
   transform: translateY(-10px);
 }
+.icon-containerNohover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  > p {
+    padding-top: 5px ;
+  }
+
+}
+
+.icon-containerNohover:hover {
+//  z-index: 1;
+//  position: relative;
+ height: 100px;
+}
+
 
 .shadow-image {
     display: flex;

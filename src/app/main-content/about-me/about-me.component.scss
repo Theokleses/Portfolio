@@ -2,7 +2,6 @@ section {
   background-color: #1a2743;
   background-color: #27334b;
   background-color: #141d2f;
-  padding-left: 100px;
   // position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -31,6 +30,7 @@ span {
 .aboutme-sektion {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 200px;
 }
 
@@ -45,9 +45,10 @@ span {
 }
 
 .pd-bot {
-  padding-bottom: 50px;
-  margin-top: -150px;
+  text-align: center;
+  padding-bottom: 80px;
+  margin-top: -230px;
 }
 .aboutme-image {
-  margin-top: -200px; /* Reduziert den oberen Rand und verschiebt das Bild nach oben */
+  margin-top: -100px; /* Reduziert den oberen Rand und verschiebt das Bild nach oben */
 }

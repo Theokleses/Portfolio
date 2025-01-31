@@ -8,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySKillsComponent {
+  
+  iconSrc = '/assets/img/cl2.png';
+  iconHover = '/assets/img/cl-hover.png';
+
+
+  hoverIcon(direction: 'up', isHovering: boolean) {
+    if (direction === 'up') {
+      this.iconSrc = isHovering
+        ? this.iconHover
+        : '/assets/img/cl2.png';
+    }
+  }
+
 
 }

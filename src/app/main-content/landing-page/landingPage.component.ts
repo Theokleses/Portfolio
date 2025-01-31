@@ -8,21 +8,25 @@ import { NavbarComponent } from './navbar/navbar.component';
     standalone: true,
     imports: [CommonModule,NavbarComponent,],
     template:`
-    <section id="landing-page">
-    <app-navbar></app-navbar>
+    <section>
     <div class="first-sektion">
-    <img src="./assets/img/file.png">
+    <div>
+    <img class="landingpage-img" src="./assets/img/file.png">
+    </div>
     <div class="text-container">
-    <div class="name-job">
+    <div class="job-name">
     <span class="Iam">I am</span>
     <p class="main-name">Osahon Schmolze</p>
     <p class="job">FRONTEND DEVELOPER</p>
     </div> 
     <div class="center-button">
+    <a href="#my-contact">  
     <button class="button">Lets's talk!</button>
+    </a>
     </div> 
   </div>
   </div>
+
   <div class="first-kontakt">
   <div class="left-sektion">  
   <hr class="styled-line">
@@ -30,11 +34,12 @@ import { NavbarComponent } from './navbar/navbar.component';
   <a class="icons" href=""><img src="./assets/img/mail.png"></a>
   <a class="icons" href=""><img src="./assets/img/linked.png"></a>
   <p>osahonschmolze222&#64;gmail.com</p>
-</div>
-  <div class="scroll-down">
-  <span>Scroll down</span>
-  <img class="arrow" src="./assets/img/arrow.png">
   </div>
+  <div class="scroll-down">
+  <img class="arrow" src="./assets/img/scroll-down.png">
+
+</div>
+
   </div>  
     </section>
     `,

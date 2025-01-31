@@ -1,6 +1,8 @@
 <section>
+  <div>
  <div class="dp-flex">  
-  <div class="icons-and-text">
+  <!-- <div class="icons-and-text"> -->
+
     <div class="firstIcon-line">
       <div class="icon-container">
         <img src="./assets/img/html.png" alt="HTML-Logo" />
@@ -18,9 +20,8 @@
         <img src="./assets/img/ts.png" alt="TypeScript-Logo" />
         <p>TypeScript</p>
       </div>
-    </div>
 
-    <div class="firstIcon-line">
+    
       <div class="icon-container">
         <img src="./assets/img/angular.png" alt="HTML-Logo" />
         <p>Angular</p>
@@ -37,23 +38,24 @@
         <img src="./assets/img/api.png" alt="TypeScript-Logo" />
         <p>Rest Api</p>
       </div>
-    </div>
 
-    <div class="firstIcon-line">
       <div class="icon-container">
         <img src="./assets/img/scrum.png" alt="HTML-Logo" />
-        <p>Scrum</p>
+        <p style="padding-top: 10px;">Scrum</p>
       </div>
       <div class="icon-container">
         <img src="./assets/img/md.png" alt="CSS-Logo" />
         <p>Material Design</p>
       </div>
-      <div class="icon-container">
-        <img src="./assets/img/cl.png" alt="JavaScript-Logo" />
-        <p>Continually learning</p>
+      <div class="icon-containerNohover">
+        <img  
+              (mouseover)="hoverIcon('up', true)"
+              (mouseout)="hoverIcon('up', false)" 
+              [src]="iconSrc" alt="CL-Icon">
       </div>
     </div>
-  </div>
+  <!-- </div> -->
+
 
   <div class="right">
     <div class="mySkills-text">
@@ -70,18 +72,22 @@
         knowledge.
       </p>
       <div class="rightb">
+        <a href="#my-contact">  
         <button>Get in touch</button>
+        </a>
       </div>
     </div>
+ 
 
     <div class="line-heigth">
       <hr class="styled-line" />
     </div>
   </div>
 </div> 
+</div>
 
-<div class="shadow-image">
+'<div class="shadow-image">
     <img src="/../assets/img/greenshadow.png" alt="Green-Shadow" />
-  </div>
+  </div>'
 </section>
 
