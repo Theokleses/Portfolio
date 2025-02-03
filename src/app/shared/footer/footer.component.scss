@@ -7,6 +7,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include contentmax();
 }
 span {
   font-size: 35px;
@@ -39,3 +40,17 @@ span {
 }
 
 
+@media (max-width:850px ) {
+  section {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 20px;
+  }
+  .styled-name {
+    margin-top: 0;
+    line-height: 1.8;
+  }
+}

@@ -1,4 +1,6 @@
+@import "../../../../styles.scss";
 nav {
+  @include contentmax();
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,4 +28,92 @@ nav {
     }
   }
 }
+.fontNunito-Sans {
+  font-size: 35px;
+}
+// Hamburger Menu
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+// Translation toggle button
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #3DE1C7;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  width: 80px;
+  height: 30px;
+}
 
+.lang-option {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3DE1C7;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 50%;
+  height: 24px;
+  background-color: #3DE1C7;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.active {
+  color: #141d2f !important;
+}
+
+.active-slider {
+  transform: translateX(100%);
+}
+
+
+@media (max-width: 752px) {
+  nav{
+    padding-left: 30px;
+    padding-right: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+  .menu {
+      visibility: hidden;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background: black;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+  }
+  .menu.show {
+      visibility: visible;
+      opacity: 1;
+      max-height: 200px;
+  }
+  .hamburger {
+      display: block;
+  }
+
+}

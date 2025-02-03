@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <p class="fontNunito-Sans">
         <a href="">
             <span>Os</span>
@@ -12,6 +12,31 @@
         <a href="#my-skills">Skills</a>
         <a href="#my-portfolio">Portfolio</a>
     </div>
+</nav> -->
+
+
+<nav class="contentmax">
+    <div class="left-sektion">
+    <p class="fontNunito-Sans">
+        <a href="">
+            <span>Os</span>
+            <span class="split split-o">a</span>
+            <span>ho</span>
+            <span class="split split-n">n</span>
+        </a>
+    </p>
+    <div class="lang-toggle" (click)="toggleLanguage()">
+        <div class="toggle-slider" [class.active-slider]="selectedLanguage === 'de'"></div>
+        <div class="lang-option" [class.active]="selectedLanguage === 'en'">EN</div>
+        <div class="lang-option" [class.active]="selectedLanguage === 'de'">DE</div>
+    </div>
+</div>
+    <div class="menu fontPoppins" [ngClass]="{ 'show': menuOpen }">
+        <a href="#about-me">About me</a>
+        <a href="#my-skills">Skills</a>
+        <a href="#my-portfolio">Portfolio</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" (click)="toggleMenu()">
+        &#9776;
+    </button>
 </nav>
-
-

@@ -1,17 +1,21 @@
+@import "../../../styles.scss";
 section {
   background-color: #1a2743;
   background-color: #27334b;
   background-color: #141d2f;
-  // position: relative;
+  margin-top: 10px;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include contentmax();
+  @media (min-width: 1300px) {
+    margin-top: calc(10px - ((min(1920px, 100vw) - 1300px) / 100 * 10px));
+  }
 }
 .shadow-image {
   display: flex;
   justify-content: end;
   margin-top: -500px;
 }
-
 span {
   font-size: 16px;
 }
@@ -25,7 +29,7 @@ span {
 }
 .custom-table tr:nth-child(3) img {
   position: relative;
-  top: -30px; /* Verschiebt das Bild nach oben, Wert anpassen */
+  top: -30px; 
 }
 .aboutme-sektion {
   display: flex;
@@ -41,7 +45,7 @@ span {
   border-radius: 50%;
   // object-fit: contain;
   overflow: hidden;
-  border: 5px solid #70e61c; /* Schwarzer Rahmen mit 5px Breite */
+  border: 5px solid #70e61c;
 }
 
 .pd-bot {
@@ -50,5 +54,52 @@ span {
   margin-top: -230px;
 }
 .aboutme-image {
-  margin-top: -100px; /* Reduziert den oberen Rand und verschiebt das Bild nach oben */
+  margin-top: -100px; 
+}
+
+@media (max-width: 1255px) {
+  .pd-bot {
+    // margin-top: -340px;
+    margin-top: -420px;
+  }
+  .shadow-image {
+    margin-top: -530px;
+  }
+  .aboutme-sektion {
+    gap: 75px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .aboutme-image {
+    display: none;
+  }
+  .pd-bot {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 752px) {
+  .shadow-image {
+    margin-top: -350px;
+  }
+  .pd-bot {
+    margin-top: -400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-name {
+    font-size: 50px;
+  }
+  .aboutme-text {
+    max-width: 370px;
+  }
+  .aboutme-sektion {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .pd-bot {
+    padding-bottom: 20px;
+  }
 }

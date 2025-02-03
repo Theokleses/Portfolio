@@ -6,6 +6,7 @@ section {
   background-repeat: no-repeat;
   background-position: -110px 400px;
   background-size: contain;
+  @include contentmax();
 }
 
 h2 {
@@ -70,9 +71,9 @@ input {
 // }
 .contact-line {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 35px; 
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
   width: 60%;
 }
 .styled-input::placeholder {
@@ -87,7 +88,7 @@ input {
   background-color: #9747ff;
 }
 .styled-input {
-  width: 100%; 
+  width: 100%;
   padding: 15px 25px;
   border: 2px solid #9747ff;
   border-radius: 10px;
@@ -97,13 +98,13 @@ input {
   }
 }
 // .input-wrapper {
-//   position: relative; 
-//   width: 100%; 
+//   position: relative;
+//   width: 100%;
 // }
 .input-icon {
-  position: absolute; 
-  bottom: 10px; 
-  right: 10px; 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .pd-bot {
@@ -131,7 +132,7 @@ input {
   align-items: center;
   gap: 10px;
   margin-bottom: 30px;
-  >img:hover {
+  > img:hover {
     cursor: pointer;
   }
 }
@@ -141,7 +142,6 @@ input {
 .arrow-up {
   display: flex;
   justify-content: end;
-  margin-right: -20px;
   padding-bottom: 100px;
   > a {
     &:hover {
@@ -158,49 +158,111 @@ input {
 }
 
 button:disabled {
-  background-color: #ccc; 
-  cursor: not-allowed;  
-  opacity: 0.6;         
-  // pointer-events: none; 
-  transition: none; 
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+  // pointer-events: none;
+  transition: none;
   transform: none;
 }
 
 .input-wrapper {
-  position: relative; 
+  position: relative;
 }
 
 .error-icon {
   position: absolute;
-  right: 25px; 
+  right: 25px;
   top: 35%;
   transform: translateY(-50%);
-  width: 28px; 
+  width: 28px;
   height: 28px;
 }
 
 .success-icon {
   position: absolute;
-  right: 25px; 
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
-  width: 28px; 
+  width: 28px;
   height: 28px;
 }
-.error-icon-message{
+.error-icon-message {
   position: absolute;
-  right: 25px; 
+  right: 25px;
   top: 13%;
   transform: translateY(-50%);
-  width: 28px; 
+  width: 28px;
   height: 28px;
 }
 .success-icon-message {
   position: absolute;
-  right: 25px; 
+  right: 25px;
   top: 13%;
   transform: translateY(-50%);
-  width: 28px; 
+  width: 28px;
   height: 28px;
+}
 
+@media (max-width: 1250px) {
+  .my-contact {
+    gap: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  h2 {
+    padding-bottom: 0;
+  }
+  .my-contact {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 0;
+  }
+  .contact-text {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 60px;
+  }
+  .contact-line {
+    width: 400px;
+  }
+}
+
+@media (max-width: 630px) {
+  form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .arrow-up {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  section {
+    background-position: -100px 450px;
+  }
+  .arrow-up {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  section {
+    background-position: -100px 870px;
+  }
+  .contact-line {
+    gap: 0;
+    width: 270px;
+  }
 }

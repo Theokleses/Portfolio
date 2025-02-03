@@ -26,17 +26,17 @@
     </div>
   </section> -->
 
-<section>
+<section class="contentmax">
   <div class="shadow-image">
     <img src="/../assets/img/greenshadow-two.png" alt="Green-Shadow" />
   </div>
   <div class="reference-section">
     <div class="reference-gallery">
-      <div class="ref-icon">
+      <!-- <div class="ref-icon">
         <img src="assets/img/reference-icon.png" alt="Reference-Icon" />
-      </div>
+      </div> -->
       <div class="line-height">
-      <img [src]="references[currentIndex].image" alt="Current-Reference" />
+        <img class="reference-img" [src]="getCurrentImage()" alt="Current-Reference" />
         <hr class="styled-line" />
       </div>
       <div class="arrow-section">
@@ -48,10 +48,7 @@
           [src]="leftArrowSrc"
           alt="Left-Arrow"
         />
-        <img
-          [src]="references[currentIndex].numberImage"
-          alt="Current-DotReference"
-        />
+        <img [src]="references[currentIndex].numberImage" alt="Current-DotReference" />
         <img
           class="pd-l"
           (click)="nextImage()"
@@ -63,4 +60,5 @@
       </div>
     </div>
   </div>
+  
 </section>

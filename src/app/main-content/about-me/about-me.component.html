@@ -1,27 +1,31 @@
-<section>
+<section class="contentmax">
+  <!-- <button (click)="changeLangue('de')">DE</button>
+  <button (click)="changeLangue('en')">EN</button> -->
+  <div>{{ 'about-me.title' | translate }}</div>
+  <div>{{ 'about-me.hello' | translate:{name} }}</div>
   <div class="shadow-image">
     <img src="/../assets/img/purple-shadow.png" alt="Purple-Shadow">
     </div>
-  <p class="main-name pd-bot">About me</p>
+    <div class="aboutme-container">
+      <!-- <p class="main-name pd-bot">About me</p> -->
+      <p class="main-name pd-bot">{{ 'about-me.title' | translate }}</p>
+      <div></div>
+  </div>  
   <div class="aboutme-sektion">
   <div class="aboutme-text">
-    <span
-      >Hi, I’m a german speaking Frontend Developer based near Munich. Motivated
-      by the limitless opportunities within IT, I am excited about crafting
-      visually captivating and intuitive websites and applications.</span
-    >
+    <span>{{ 'about-me.first-text' | translate }}</span>
     <table class="custom-table">
       <tr>
         <td><img src="./assets/img/location.png"></td>
-        <td>Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.</td>
+        <td>{{ 'about-me.location-text' | translate }}</td>
       </tr>
       <tr>
         <td><img src="./assets/img/globe.png"></td>
-        <td>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.</td>
+        <td>{{ 'about-me.lightbulb-text' | translate }}</td>
       </tr>
       <tr>
         <td><img src="./assets/img/puzzle.png"></td>
-        <td>In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.</td>
+        <td>{{ 'about-me.puzzle-text' | translate }}</td>
       </tr>
     </table>
   </div>
@@ -29,5 +33,4 @@
     <img class="pos-image" src="./assets/img/aboutme-img.png">
   </div>
 </div>
-
 </section>

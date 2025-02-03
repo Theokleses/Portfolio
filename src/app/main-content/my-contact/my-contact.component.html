@@ -1,16 +1,15 @@
-<section>
+<section class="contentmax">
   <div class="contact-line">
     <hr class="styled-line" />
-    <h1>Contact</h1>
+    <h1>{{ 'my-contact.title' | translate }}</h1>
   </div>
   <div class="my-contact">
     <div class="contact-text">
-      <h2>Got a problem to solve?</h2>
+      <h2>{{ 'my-contact.main-text' | translate }}</h2>
       <p>
-        Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.
+        {{ 'my-contact.first-text' | translate }}
       </p>
-      <p>Need a Frontend developer? <b>Contact me!</b></p>
+      <p [innerHTML]="'my-contact.second-text' | translate"> </p>
     </div>
       <div class="contact-input">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -54,9 +53,8 @@
         <div class="privacy-line">
             <div class="privacy-text">
           <img (click)="clickBox()" [src]="clickBoxSrc"alt="Click-Box" />
-          <p>
-            I've read the <span class="highlight">privacy policy</span> and agree to the processing of my data as outlined.
-          </p>
+          <p  [innerHTML]="'my-contact.privacy-text' | translate"></p>
+         <!-- <p>I've read the <span class='highlight'>privacy policy</span> and agree to the processing of my data as outlined.</p> -->
         </div>
           <button type="submit" [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
         </div>

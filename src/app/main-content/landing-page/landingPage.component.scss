@@ -1,16 +1,23 @@
 @import "../../../styles.scss";
 
+
+
 section {
   font-family: "Poppins";
-  height: 100vh;
+  // height: 100vh; 
+  // max-height: 100vh; 
   background-color: #141d2f;
   background-image: url("/../assets/img/hero-background2.png"),
     url("/../assets/img/shadow.png");
   background-repeat: no-repeat;
-  background-position: 0 150px, -70px 10px;
-  background-size: cover, contain;
-}
+  background-position: 0 130px, -70px 10px;
+  background-size: cover, 50%;
+  @include contentmax();
 
+  @media (min-width: 1920px) {
+    height: auto; 
+  }
+}
 .first-sektion {
   display: flex;
   justify-content: space-between;
@@ -65,8 +72,8 @@ section {
   color: white;
   margin-top: 50px;
   justify-content: space-between;
-  // z-index: 1;
-  // position: absolute;
+  z-index: 2;
+  position: relative;
 }
 
 .scroll-down {
@@ -76,10 +83,6 @@ section {
   padding-right: 100px;
   text-align: center;
   transform: rotate(360deg);
-}
-
-.landingpage-img {
-  // transform: rotate(270deg);
 }
 
 .left-sektion {
@@ -107,6 +110,7 @@ section {
 
 @media (max-width: 1255px) {
   section {
+    height: 100vh;
     background-position: 0 75px, -48px 10px;
     background-size: cover, 60%;
   }
@@ -160,6 +164,9 @@ section {
   .first-sektion {
     padding-left: 0;
   }
+  .first-kontakt p {
+    display: none;
+  }
 }
 
 @media (max-width: 930px) {
@@ -174,5 +181,95 @@ section {
     > .job {
       font-size: 31px;
     }
+  }
+  .Iam {
+    font-size: 32px;
+    margin-bottom: -70px;
+  }
+}
+
+@media (max-width: 752px) {
+  section {
+    background-position: 0 95px, center 10px;
+    background-size: cover, 60vh;
+  }
+  .first-sektion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 55px;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .center-button {
+    padding-top: 30px;
+  }
+  .left-sektion {
+    margin-top: -150px;
+    gap: 50px;
+  }
+  .scroll-down img {
+    display: none;
+  }
+  .job-name {
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 650px) {
+  .left-sektion {
+    gap: 25px;
+  }
+  .styled-line {
+    width: 50px;
+  }
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 400px) {
+  .text-container {
+    padding-right: 40px;
+  }
+  .landingpage-img {
+    height: 350px;
+  }
+  .main-name {
+    font-size: 26px;
+  }
+  .job-name {
+    font-size: 21px;
+  }
+  .Iam {
+    font-size: 25px;
+    margin-bottom: -50px;
+  }
+}
+
+@media (max-width: 360px) {
+  section {
+    background-position: 0 40px, center 10px;
+  }
+  .main-name {
+    font-size: 21px;
+  }
+  .job-name {
+    > .job {
+      font-size: 18px;
+    }
+  }
+  .Iam {
+    font-size: 20px;
+    margin-bottom: -45px;
+  }
+  .center-button {
+    padding-left: 45px;
+  }
+  .text-container {
+    line-height: 1.2;
   }
 }

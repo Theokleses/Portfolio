@@ -4,6 +4,7 @@ section {
   justify-content: center;
   flex-direction: column;
   padding-top: 100px;
+  @include contentmax();
 }
 
 .arrow-section {
@@ -29,6 +30,8 @@ section {
   gap: 70px;
   margin-top: -300px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .pd-r {
@@ -47,7 +50,7 @@ section {
   z-index: 1;
 }
 
-.ref-icon{
+.ref-icon {
   padding-right: 1202px;
   margin-bottom: -110px;
   position: relative;
@@ -56,7 +59,50 @@ section {
 .styled-line {
   @include styled-line(150px);
 }
-.line-height{
+.line-height {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1350px) {
+  .reference-img {
+    width: 900px;
+  }
+}
+
+@media (max-width: 1080px) {
+  section {
+    padding-top: 30px;
+  }
+  .reference-gallery {
+    gap: 0;
+    padding-left: 100px;
+  }
+  .reference-img {
+    width: 340px;
+  }
+  .line-height {
+    margin-bottom: 0;
+  }
+  .arrow-section {
+    padding-right: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reference-img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 550px) {
+  .reference-gallery {
+    padding-left: 0;
+  }
+  .arrow-section {
+    padding-right: 0;
+  }
+  .styled-line {
+    display: none;
+  }
 }

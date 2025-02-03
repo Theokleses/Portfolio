@@ -8,7 +8,8 @@ section {
   margin-top: -700px;
   background-image: url("/../assets/img/second-purpel-shadow.png");
   background-repeat: no-repeat;
-  background-position: -200px  880px ;
+  background-position: -200px 880px;
+  @include contentmax();
 }
 h2 {
   color: #9747ff;
@@ -84,13 +85,17 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  > p {
+    text-align: center;
+  }
 }
+
 .styled-line {
   @include styled-line(100px);
 }
 
 .line-heigth {
-  padding-top: 10px;
+  padding-top: 10px; 
 }
 
 .portfilio-main {
@@ -98,4 +103,109 @@ button {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .normal-portfolio {
+    flex-direction: column;
+    gap: 0;
+  }
+  .reverse-portfolio {
+    flex-direction: column;
+    gap: 0;
+  }
+  .portfolio-description {
+    text-align: center;
+  }
+  .portfolio-description-reverse {
+    text-align: center;
+  }
+  .mg-bt {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .buttons-reverse {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 930px) {
+  .line-heigth {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 60px;
+  }
+  .mockup-image {
+    width: 400px;
+  }
+  .portfilio-main {
+    gap: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .line-heigth {
+    padding-bottom: 65px;
+  }
+
+}
+@media (max-width: 450px) {
+  .styled-line {
+    width: 50px;
+  }
+  .line-heigth {
+    padding-bottom: 75px;
+  }
+  .portfolio-description {
+    >p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .portfolio-description-reverse {
+    >p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 40px;
+  }
+  .mockup-image {
+    width: 300px;
+  }
+  .buttons {
+    gap: 30px;
+  }
+  .buttons-reverse {
+    gap: 30px;
+  }
+  .styled-line {
+    width: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .span-gap {
+    font-size: 18px;
+  }
+  .buttons {
+    gap: 15px;
+  }
+  .buttons-reverse {
+    gap: 15px;
+  }
+  
 }
