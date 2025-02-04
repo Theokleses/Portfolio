@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { SwitchlanguageService } from '../../services/switchlanguage.service';
 
 @Component({
   selector: 'app-landing-Page',
@@ -15,13 +16,21 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
         </div>
         <div class="text-container">
           <div class="job-name">
-            <span class="Iam">I am</span>
+          @if(this.switchlanguage.german){
+            <p class="Iam-ge">Ich bin</p>
+          }@else {
+            <p class="Iam">I am</p>
+          }
             <p class="main-name">Osahon Schmolze</p>
+            @if(this.switchlanguage.german){
+            <p class="job-ge">FRONTEND ENTWICKLER</p>
+          }@else {
             <p class="job">FRONTEND DEVELOPER</p>
+          }
           </div>
           <div class="center-button">
             <a href="#my-contact">
-              <button class="button">Lets's talk!</button>
+              <button class="button">{{ 'landing-page.button' | translate }}</button>
             </a>
           </div>
         </div>
@@ -30,9 +39,9 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
       <div class="first-kontakt">
         <div class="left-sektion">
           <hr class="styled-line" />
-          <a class="icons" href=""><img src="./assets/img/github.png" /></a>
-          <a class="icons" href=""><img src="./assets/img/mail.png" /></a>
-          <a class="icons" href=""><img src="./assets/img/linked.png" /></a>
+          <a class="icons" href="https://github.com/Theokleses" target="_blank" rel="noopener noreferrer"><img src="./assets/img/github.png" /></a>
+          <a class="icons" href="mailto:osahonschmolze222@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/mail.png" /></a>
+          <a class="icons" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/linked.png" /></a>
           <p>osahonschmolze222&#64;gmail.com</p>
         </div>
         <div class="scroll-down">
@@ -43,4 +52,6 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   `,
   styleUrls: ['./landingPage.component.scss'],
 })
-export class LandPageComponent {}
+export class LandPageComponent {
+   switchlanguage = inject(SwitchlanguageService);
+}

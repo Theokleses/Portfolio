@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { SwitchlanguageService } from '../../services/switchlanguage.service';
 import {
   TranslatePipe,
   TranslateDirective,
   TranslateService,
 } from '@ngx-translate/core';
+
+ 
 
 @Component({
   selector: 'app-my-contact',
@@ -16,7 +19,11 @@ import {
 })
 export class MyContactComponent {
 
-  http = inject(HttpClient)
+
+  switchlanguage = inject(SwitchlanguageService);
+
+  
+  http = inject(HttpClient);
 
 
   isBoxClicked: boolean = false;
@@ -67,12 +74,6 @@ export class MyContactComponent {
     }
   }
   
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-  //   }
-  // }
-
   hoverArrow(direction: 'up', isHovering: boolean) {
     if (direction === 'up') {
       this.upArrowSrc = isHovering

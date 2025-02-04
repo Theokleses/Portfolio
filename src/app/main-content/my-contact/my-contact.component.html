@@ -53,8 +53,11 @@
         <div class="privacy-line">
             <div class="privacy-text">
           <img (click)="clickBox()" [src]="clickBoxSrc"alt="Click-Box" />
-          <p  [innerHTML]="'my-contact.privacy-text' | translate"></p>
-         <!-- <p>I've read the <span class='highlight'>privacy policy</span> and agree to the processing of my data as outlined.</p> -->
+          @if(this.switchlanguage.german){
+            <p class="ge-text">Ich habe die <a href="legal-notice" class="highlight">Datenschutzrichtlinie</a> gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.</p>
+          }@else {
+            <p>I've read the <a href="legal-notice" class="highlight">privacy policy</a> and agree to the processing of my data as outlined.</p>
+          }
         </div>
           <button type="submit" [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
         </div>

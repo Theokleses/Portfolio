@@ -34,6 +34,12 @@ p {
   justify-content: flex-end;
   padding-bottom: 20px;
 }
+.main-name-ge {
+  font-size: 50px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
 .normal-text {
   font-weight: 400;
   font-size: 16px;
@@ -45,6 +51,11 @@ p {
   font-weight: 700;
   font-size: 32px;
   padding-bottom: 10px;
+}
+.styled-text-ge {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 15px;
 }
 
 .highlight {
@@ -73,10 +84,6 @@ p {
 .styled-line {
   @include styled-line(150px);
 }
-
-// .mySkills-text{
-//     display: flex;
-// }
 
 .icon-container {
   display: flex;
@@ -161,6 +168,12 @@ p {
   .normal-text:last-of-type,
   .rightb {
     order: 4;
+  }
+}
+
+@media (max-width: 1200px) {
+  .styled-text-ge {
+    padding-bottom: 35px;
   }
 }
 

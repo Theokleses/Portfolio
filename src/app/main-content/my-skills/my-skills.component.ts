@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SwitchlanguageService } from '../../services/switchlanguage.service'; 
 import {
   TranslatePipe,
   TranslateDirective,
   TranslateService,
 } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -15,6 +17,8 @@ import {
 })
 export class MySKillsComponent {
   
+   switchlanguage = inject(SwitchlanguageService);
+
   iconSrc = '/assets/img/cl2.png';
   iconHover = '/assets/img/cl-hover.png';
 

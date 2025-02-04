@@ -1,21 +1,20 @@
 @import "../../../styles.scss";
 
-
-
 section {
   font-family: "Poppins";
-  // height: 100vh; 
-  // max-height: 100vh; 
+  // height: 100vh;
+  // max-height: 100vh;
   background-color: #141d2f;
   background-image: url("/../assets/img/hero-background2.png"),
     url("/../assets/img/shadow.png");
   background-repeat: no-repeat;
   background-position: 0 130px, -70px 10px;
   background-size: cover, 50%;
+  padding-top: 10px;
   @include contentmax();
 
   @media (min-width: 1920px) {
-    height: auto; 
+    height: auto;
   }
 }
 .first-sektion {
@@ -47,10 +46,23 @@ section {
   display: flex;
   margin-bottom: -150px;
 }
-
+.Iam-ge {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  font-size: 42px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: -150px;
+}
 .job-name {
   > .job {
     font-size: 77px;
+    color: #9747ff;
+  }
+}
+.job-name {
+  > .job-ge {
+    font-size: 73px;
     color: #9747ff;
   }
 }
@@ -103,6 +115,11 @@ section {
       font-size: 51px;
     }
   }
+  .job-name {
+    > .job-ge {
+      font-size: 49px;
+    }
+  }
   .landingpage-img {
     height: 600px;
   }
@@ -123,14 +140,18 @@ section {
     }
   }
   .Iam {
-    font-size: 40px;
-    margin-bottom: -100px;
+    font-size: 47px;
+    margin-bottom: -120px;
   }
+  // .Iam {
+  //   font-size: 38px;
+  //   margin-bottom: 130px;
+  // }
   .landingpage-img {
     height: 500px;
   }
   .text-container {
-    line-height: 1;
+    line-height: 1.2;
   }
 }
 
@@ -146,8 +167,17 @@ section {
       font-size: 43px;
     }
   }
+  .job-name {
+    > .job-ge {
+      font-size: 41px;
+    }
+  }
   .Iam {
-    margin-bottom: -90px;
+    margin-bottom: -109px;
+  }
+  .Iam-ge {
+    font-size: 33px;
+    margin-bottom: -111px;
   }
   .text-container {
     padding-right: 75px;
@@ -182,15 +212,24 @@ section {
       font-size: 31px;
     }
   }
+  .job-name {
+    > .job-ge {
+      font-size: 30px;
+    }
+  }
   .Iam {
     font-size: 32px;
-    margin-bottom: -70px;
+    margin-bottom: -75px;
+  }
+  .Iam-ge {
+    font-size: 28px;
+    margin-bottom: -85px;
   }
 }
 
 @media (max-width: 752px) {
   section {
-    background-position: 0 95px, center 10px;
+    background-position: 0 73px, center 10px;
     background-size: cover, 60vh;
   }
   .first-sektion {
@@ -229,9 +268,28 @@ section {
 }
 
 @media (max-width: 460px) {
+  .main-name {
+    font-size: 30px;
+  }
+  .Iam {
+    margin-bottom: -68px;
+  }
+  .job-name {
+    .job {
+      font-size: 26px;
+    }
+  }
+  .job-name {
+    .job-ge {
+      font-size: 24px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
+  section {
+    background-position: 0 20px, center 10px;
+  }
   .text-container {
     padding-right: 40px;
   }
@@ -242,18 +300,29 @@ section {
     font-size: 26px;
   }
   .job-name {
-    font-size: 21px;
+    .job {
+      font-size: 22px;
+    }
+  }
+  .job-name {
+    .job-ge {
+      font-size: 20px;
+    }
   }
   .Iam {
-    font-size: 25px;
-    margin-bottom: -50px;
+    font-size: 23px;
+    margin-bottom: -55px;
+  }
+  .Iam-ge {
+    font-size: 20px;
+    margin-bottom: -60px;
   }
 }
 
 @media (max-width: 360px) {
-  section {
-    background-position: 0 40px, center 10px;
-  }
+  // section {
+  //   background-position: 0 40px, center 10px;
+  // }
   .main-name {
     font-size: 21px;
   }
@@ -262,10 +331,23 @@ section {
       font-size: 18px;
     }
   }
-  .Iam {
-    font-size: 20px;
-    margin-bottom: -45px;
+  .job-name {
+    > .job-ge {
+      font-size: 18px;
+    }
   }
+  .Iam {
+    font-size: 23px;
+    margin-bottom: -50px;
+  }
+  .Iam-ge {
+    font-size: 17px;
+    margin-bottom: -52px;
+  }
+  // .Iam {
+  //   font-size: 23px;
+  //   margin-bottom: -73px;
+  // }
   .center-button {
     padding-left: 45px;
   }

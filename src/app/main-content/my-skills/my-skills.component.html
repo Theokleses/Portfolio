@@ -1,102 +1,7 @@
-<!-- <section>
-  <div>
- <div class="dp-flex">  
-
-
-    <div class="firstIcon-line">
-      <div class="icon-container">
-        <img src="./assets/img/html.png" alt="HTML-Logo" />
-        <p>HTML</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/css.png" alt="CSS-Logo" />
-        <p>CSS</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/js.png" alt="JavaScript-Logo" />
-        <p>JavaScript</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/ts.png" alt="TypeScript-Logo" />
-        <p>TypeScript</p>
-      </div>
-
-    
-      <div class="icon-container">
-        <img src="./assets/img/angular.png" alt="HTML-Logo" />
-        <p>Angular</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/firebase.png" alt="CSS-Logo" />
-        <p>Firebase</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/git.png" alt="JavaScript-Logo" />
-        <p>Git</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/api.png" alt="TypeScript-Logo" />
-        <p>Rest Api</p>
-      </div>
-
-      <div class="icon-container">
-        <img src="./assets/img/scrum.png" alt="HTML-Logo" />
-        <p style="padding-top: 10px;">Scrum</p>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/img/md.png" alt="CSS-Logo" />
-        <p>Material Design</p>
-      </div>
-      <div class="icon-containerNohover">
-        <img  
-              (mouseover)="hoverIcon('up', true)"
-              (mouseout)="hoverIcon('up', false)" 
-              [src]="iconSrc" alt="CL-Icon">
-      </div>
-    </div>
- 
-
-
-  <div class="right">
-    <div class="mySkills-text">
-      <p class="main-name">My skills</p>
-      <p class="normal-text">
-        I have gained experience in building projects with different frontend
-        technologies and concepts.
-      </p>
-      <p class="styled-text">
-        Looking for <span class="highlight">another skill</span>?
-      </p>
-      <p class="normal-text">
-        Feel free to contact me. I look forward to expanding on my previous
-        knowledge.
-      </p>
-      <div class="rightb">
-        <a href="#my-contact">  
-        <button>Get in touch</button>
-        </a>
-      </div>
-    </div>
- 
-
-    <div class="line-heigth">
-      <hr class="styled-line" />
-    </div>
-  </div>
-</div> 
-</div>
-
-'<div class="shadow-image">
-    <img src="/../assets/img/greenshadow.png" alt="Green-Shadow" />
-  </div>'
-</section>
- -->
-
  <section class="contentmax">
   <div>
     <div class="dp-flex">
 
-      <!-- Icon-Sektion -->
       <div class="firstIcon-line">
         <div class="icon-container">
           <img src="./assets/img/html.png" alt="HTML-Logo" />
@@ -138,14 +43,23 @@
           <img src="./assets/img/md.png" alt="Material Design-Logo" />
           <p>Material Design</p>
         </div>
+      <div class="icon-containerNohover">
+        <img  
+              (mouseover)="hoverIcon('up', true)"
+              (mouseout)="hoverIcon('up', false)" 
+              [src]="iconSrc" alt="CL-Icon">
       </div>
+    </div>
 
-      <!-- Text-Bereich -->
+
       <div class="right">
-        <p class="main-name">{{ 'my-skills.title' | translate }}</p>
+        @if(this.switchlanguage.german){
+          <p class="main-name-ge"> Meine Fähigkeiten</p>
+        }@else { <p class="main-name">My skills</p>}
         <p class="normal-text">{{ 'my-skills.first-text' | translate }}</p>
-        <p class="styled-text">Looking for <span class="highlight">another skill</span>?</p>
-        <!-- <p class="styled-text">[innerHTML]{{ 'my-skills.styled-text' | translate }}</p> -->
+        @if(this.switchlanguage.german){
+          <p class="styled-text-ge">Suchst du nach einer <span class="highlight">weiteren Fähigkeit</span>?</p>
+        }@else {<p class="styled-text">Looking for <span class=highlight>another skill</span>?</p>}
         <p class="normal-text">{{ 'my-skills.second-text' | translate }}</p>
         <div class="rightb">
           <a href="#my-contact">

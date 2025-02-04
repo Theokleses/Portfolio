@@ -141,6 +141,10 @@ button {
 }
 
 @media (max-width: 650px) {
+  section {
+    background-size: 600px;
+    background-position: -130px 848px;
+  }
   h1 {
     font-size: 60px;
   }
