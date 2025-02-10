@@ -39,5 +39,13 @@
     "first":"Ich bin",
     "second":"FRONTEND ENTWICKLER",
     "button": "Reden wir!"
+  },
+  "impressum": {
+    "title":"Impressum",
+    "title-two":"Kontakt",
+    "tel":"Telefon"
+  },
+  "legal-notice": {
+    "section": ""
   }
 }

@@ -39,5 +39,10 @@
     "first": "I am",
     "second": "FRONTEND DEVELOPER",
     "button": "Lets's talk!"
+  },
+  "impressum": {
+    "title":"Imprint",
+    "title-two":"Contact",
+    "tel":"Phone"
   }
 }

@@ -59,7 +59,10 @@
             <p>I've read the <a href="legal-notice" class="highlight">privacy policy</a> and agree to the processing of my data as outlined.</p>
           }
         </div>
-          <button type="submit" [disabled]="!isBoxClicked" >Send message &#58;&#41;</button>
+          <button type="submit" [disabled]="!isBoxClicked || contactForm.invalid" >Send message &#58;&#41;</button>
+          @if (sendMessage) {
+            <span class="message-send">Nachricht wurde versendet &#58;&#41;</span>
+            }
         </div>
         <div class="arrow-up">
         <a href="#navbar">  

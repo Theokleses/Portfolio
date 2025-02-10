@@ -2,16 +2,22 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../main-content/landing-page/navbar/navbar.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import {
+  TranslatePipe,
+  TranslateDirective,
+  TranslateService,
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [RouterLink, NavbarComponent, FooterComponent],
+  imports: [RouterLink ,NavbarComponent, FooterComponent,TranslatePipe, TranslateDirective],
   // template: `<app-navbar></app-navbar>`,
   templateUrl: `./legal-notice.component.html`,
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
+
   leftArrowSrc = '/assets/img/arrow-left.png';
   leftArrowHover = '/assets/img/arrow-left-hover.png';
 

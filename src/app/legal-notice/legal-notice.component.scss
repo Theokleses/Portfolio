@@ -1,5 +1,7 @@
+@import "./../../styles.scss";
 section {
     height: auto;
+    @include contentmax();
 }
 a {
     color: #70E61C;

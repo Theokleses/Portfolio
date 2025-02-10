@@ -48,7 +48,12 @@
           [src]="leftArrowSrc"
           alt="Left-Arrow"
         />
-        <img [src]="references[currentIndex].numberImage" alt="Current-DotReference" />
+        <div class="indicators">
+          <div class="dot" [class.active]="currentIndex === 0"></div>
+          <div class="dot" [class.active]="currentIndex === 1"></div>
+          <div class="dot" [class.active]="currentIndex === 2"></div>
+        </div>
+        
         <img
           class="pd-l"
           (click)="nextImage()"

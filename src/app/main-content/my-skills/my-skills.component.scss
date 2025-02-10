@@ -5,7 +5,6 @@ section {
   background-color: #141d2f;
   padding-top: 100px;
   padding-bottom: 200px;
-  @include contentmax();
 }
 
 p {
@@ -22,6 +21,7 @@ p {
   justify-content: space-around;
   z-index: 2;
   position: relative;
+  @include contentmax();
 }
 .right {
   display: flex;
@@ -61,6 +61,9 @@ p {
 .highlight {
   color: #9747ff;
   font-weight: bold;
+}
+.highlight-p {
+  color: #9747ff;
 }
 .rightb {
   display: flex;
@@ -125,15 +128,51 @@ p {
   position: relative;
 }
 
-// .dp-flex {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 20px;
-//   justify-content: center;
-//   align-items: center;
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+// .toolbar {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   top: -115px;
+//   right: 0;
+//   text-align: center;
+//   width: max-content;
+//   clip-path: inset(100% 0 0 0);
+//   transition: clip-path 0.3s ease;
 // }
 
-/* Unter 1250px: Alles wird gestapelt, aber aufgeteilt */
+// .icon-container {
+//   &:hover > .toolbar {
+//     clip-path: inset(-150px 0 0 0);
+//   }
+// }
+.icon-container {
+  &:hover > .highlight-p {
+    color: white;
+  }
+}
+.toolbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: -115px;
+  right: 0;
+  text-align: center;
+  width: max-content;
+  clip-path: circle(0% at center);
+  transition: clip-path 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+}
+
+.icon-container {
+  &:hover > .toolbar {
+    clip-path: circle(100% at center);
+  }
+}
+
 @media (max-width: 1250px) {
   .dp-flex {
     flex-direction: column;
@@ -152,7 +191,7 @@ p {
   .styled-text {
     padding-left: 70px;
   }
-   .main-name {
+  .main-name {
     order: -1;
   }
 
@@ -177,9 +216,13 @@ p {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .main-name {
     font-size: 60px;
+  }
+  .firstIcon-line {
+   padding-left: 20px;
+   padding-right: 20px;
   }
   .normal-text {
     text-align: center;

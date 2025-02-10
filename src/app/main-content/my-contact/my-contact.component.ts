@@ -8,26 +8,27 @@ import {
   TranslateService,
 } from '@ngx-translate/core';
 
- 
-
 @Component({
   selector: 'app-my-contact',
   standalone: true,
-  imports: [FormsModule,TranslatePipe, TranslateDirective],
+  imports: [FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './my-contact.component.html',
   styleUrl: './my-contact.component.scss',
 })
 export class MyContactComponent {
-
-
   switchlanguage = inject(SwitchlanguageService);
 
-  
   http = inject(HttpClient);
 
+  upArrowSrc = '/assets/img/arrow-up.png';
+  upArrowHover = '/assets/img/arrow-up-hover.png';
 
+  clickBoxSrc = './assets/img/click-box.png';
+  clickedBoxSrc = './assets/img/clicked-box.png';
+  
   isBoxClicked: boolean = false;
-
+  sendMessage: boolean = false;
+  mailTest = true;
 
   contactData = {
     name: '',
@@ -35,8 +36,6 @@ export class MyContactComponent {
     message: '',
   };
 
-  
-  mailTest = true;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -49,31 +48,33 @@ export class MyContactComponent {
     },
   };
 
-  upArrowSrc = '/assets/img/arrow-up.png';
-  upArrowHover = '/assets/img/arrow-up-hover.png';
-
-  clickBoxSrc = './assets/img/click-box.png';
-  clickedBoxSrc = './assets/img/clicked-box.png';
-
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    this.sendMessage = true;
+    if (ngForm.submitted && ngForm.form.valid && !this.isBoxClicked) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+            this.isBoxClicked = false;
+          },
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    } else if (ngForm.submitted && ngForm.form.valid && this.isBoxClicked) {
       ngForm.resetForm();
+      this.isBoxClicked = false;
+      this.clickBoxSrc = './assets/img/click-box.png';
+      setTimeout(() => {
+        this.sendMessage = false;
+      }, 5000);
     }
   }
-  
+
   hoverArrow(direction: 'up', isHovering: boolean) {
     if (direction === 'up') {
       this.upArrowSrc = isHovering
@@ -88,5 +89,4 @@ export class MyContactComponent {
       ? this.clickedBoxSrc
       : './assets/img/click-box.png';
   }
-
 }

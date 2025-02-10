@@ -4,13 +4,12 @@ section {
   justify-content: center;
   flex-direction: column;
   padding-top: 100px;
-  @include contentmax();
+  // @include contentmax();
 }
 
 .arrow-section {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .reference-section {
@@ -35,11 +34,11 @@ section {
 }
 
 .pd-r {
-  padding-right: 20px;
+  padding-right: 25px;
   cursor: pointer;
 }
 .pd-l {
-  padding-left: 20px;
+  padding-left: 25px;
   cursor: pointer;
 }
 .shadow-image {
@@ -55,7 +54,36 @@ section {
   margin-bottom: -110px;
   position: relative;
 }
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 14px;
 
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .dot.active {
+    background-color: rgb(25, 203, 162);
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(25, 203, 162, 0.8);
+    animation: glow 1.5s infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px rgba(25, 203, 162, 0.6);
+    }
+    to {
+      box-shadow: 0 0 15px rgba(25, 203, 162, 1);
+    }
+  }
+}
 .styled-line {
   @include styled-line(150px);
 }
@@ -70,7 +98,7 @@ section {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1099px) {
   section {
     padding-top: 30px;
   }
@@ -85,6 +113,7 @@ section {
     margin-bottom: 0;
   }
   .arrow-section {
+    padding-top: 30px;
     padding-right: 130px;
   }
 }

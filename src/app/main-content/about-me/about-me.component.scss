@@ -6,7 +6,7 @@ section {
   margin-top: 10px;
   padding-top: 100px;
   padding-bottom: 100px;
-  @include contentmax();
+  // @include contentmax();
   @media (min-width: 1300px) {
     margin-top: calc(10px - ((min(1920px, 100vw) - 1300px) / 100 * 10px));
   }
@@ -58,10 +58,6 @@ span {
 }
 
 @media (max-width: 1255px) {
-  .pd-bot {
-    // margin-top: -340px;
-    margin-top: -420px;
-  }
   .shadow-image {
     margin-top: -530px;
   }

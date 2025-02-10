@@ -1,7 +1,6 @@
- <section class="contentmax">
+<section>
   <div>
-    <div class="dp-flex">
-
+    <div class="dp-flex contentmax">
       <div class="firstIcon-line">
         <div class="icon-container">
           <img src="./assets/img/html.png" alt="HTML-Logo" />
@@ -37,38 +36,46 @@
         </div>
         <div class="icon-container">
           <img src="./assets/img/scrum.png" alt="Scrum-Logo" />
-          <p style="padding-top: 10px;">Scrum</p>
+          <p style="padding-top: 10px">Scrum</p>
         </div>
         <div class="icon-container">
           <img src="./assets/img/md.png" alt="Material Design-Logo" />
           <p>Material Design</p>
         </div>
-      <div class="icon-containerNohover">
-        <img  
-              (mouseover)="hoverIcon('up', true)"
-              (mouseout)="hoverIcon('up', false)" 
-              [src]="iconSrc" alt="CL-Icon">
-      </div>
-    </div>
-
-
-      <div class="right">
-        @if(this.switchlanguage.german){
-          <p class="main-name-ge"> Meine Fähigkeiten</p>
-        }@else { <p class="main-name">My skills</p>}
-        <p class="normal-text">{{ 'my-skills.first-text' | translate }}</p>
-        @if(this.switchlanguage.german){
-          <p class="styled-text-ge">Suchst du nach einer <span class="highlight">weiteren Fähigkeit</span>?</p>
-        }@else {<p class="styled-text">Looking for <span class=highlight>another skill</span>?</p>}
-        <p class="normal-text">{{ 'my-skills.second-text' | translate }}</p>
-        <div class="rightb">
-          <a href="#my-contact">
-            <button>{{ 'my-skills.myskills-button' | translate }}</button>
-          </a>
+        <div class="icon-container">
+          <img src="./assets/img/cl.png" alt="Continually learning-Logo" />
+          <p class="highlight-p">Continually learning</p>
+          <div class="toolbar">
+            <img src="assets/img/hover.toolbar.png" alt="Toolbar-Icon" />
+          </div>
         </div>
       </div>
 
-    </div> 
+      <div class="right">
+        @if(this.switchlanguage.german){
+        <p class="main-name-ge">Meine Fähigkeiten</p>
+        }@else {
+        <p class="main-name">My skills</p>
+        }
+        <p class="normal-text">{{ "my-skills.first-text" | translate }}</p>
+        @if(this.switchlanguage.german){
+        <p class="styled-text-ge">
+          Suchst du nach einer
+          <span class="highlight">weiteren Fähigkeit</span>?
+        </p>
+        }@else {
+        <p class="styled-text">
+          Looking for <span class="highlight">another skill</span>?
+        </p>
+        }
+        <p class="normal-text">{{ "my-skills.second-text" | translate }}</p>
+        <div class="rightb">
+          <a href="#my-contact">
+            <button>{{ "my-skills.myskills-button" | translate }}</button>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="shadow-image">

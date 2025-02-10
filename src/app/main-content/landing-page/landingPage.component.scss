@@ -103,12 +103,28 @@ section {
   gap: 30px;
 }
 
-@media (max-width: 1690px) {
+@media (min-width: 1855px) {
+  section {
+    background-position: 0 110px, -70px 10px;
+    // background-position: 0 75px, -48px 10px;
+  }
+  // .img-container {
+  //   margin-top: 100px;
+  // }
+}
+@media (min-width: 1650px) {
 }
 
-@media (max-width: 1630px) {
+@media (max-width: 1650px) {
+  section {
+    background-position: 0 85px, -70px -10px;
+  }
   .main-name {
     font-size: 60px;
+  }
+  .Iam {
+    font-size: 50px;
+    margin-bottom: -120px;
   }
   .job-name {
     > .job {
@@ -123,12 +139,35 @@ section {
   .landingpage-img {
     height: 600px;
   }
+  .text-container {
+    line-height: 1.1;
+  }
+}
+@media (max-width: 1550px) {
+  section {
+    // background-position: 0 130px, -40px -10px
+    background-position: 0 115px, -40px -10px;
+  }
+}
+@media (max-width: 1450px) {
+  section {
+    background-position: 0 130px, -20px 10px;
+  }
 }
 
+// @media (max-width: 1555px) {
+//   .landingpage-img {
+//     height: 570px;
+//   }
+// }
+@media (max-width: 1360px) {
+  .landingpage-img {
+    height: 560px;
+  }
+}
 @media (max-width: 1255px) {
   section {
-    height: 100vh;
-    background-position: 0 75px, -48px 10px;
+    background-position: 0 140px, -50px -50px;
     background-size: cover, 60%;
   }
   .main-name {
@@ -143,24 +182,20 @@ section {
     font-size: 47px;
     margin-bottom: -120px;
   }
-  // .Iam {
-  //   font-size: 38px;
-  //   margin-bottom: 130px;
-  // }
   .landingpage-img {
-    height: 500px;
+    height: 540px;
   }
   .text-container {
     line-height: 1.2;
   }
 }
 
-@media (max-width: 1162px) {
-  .landingpage-img {
-    height: 450px;
-  }
+@media (max-width: 1200px) {
   .main-name {
     font-size: 50px;
+  }
+  .landingpage-img {
+    height: 520px;
   }
   .job-name {
     > .job {
@@ -175,6 +210,19 @@ section {
   .Iam {
     margin-bottom: -109px;
   }
+  .first-kontakt {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1162px) {
+  section {
+    background-position: 0 80px, -85px -40px;
+  }
+  .landingpage-img {
+    height: 450px;
+  }
+
   .Iam-ge {
     font-size: 33px;
     margin-bottom: -111px;
@@ -185,9 +233,15 @@ section {
   .first-sektion {
     padding-left: 25px;
   }
+  .first-kontakt {
+    margin-top: 60px;
+  }
 }
 
 @media (max-width: 980px) {
+  section {
+    background-position: 0 155px, -75px 15px;
+  }
   .text-container {
     padding-right: 50px;
   }
@@ -197,13 +251,26 @@ section {
   .first-kontakt p {
     display: none;
   }
+  .img-container {
+    padding-top: 50px;
+  }
+  .landingpage-img {
+    height: 420px;
+  }
 }
 
 @media (max-width: 930px) {
+  section {
+    // height:60vh;
+    background-position: 0 170px, -85px 40px;
+  }
+  .first-sektion {
+    padding-top: 40px;
+
+  }
   .landingpage-img {
     height: 400px;
   }
-
   .main-name {
     font-size: 36px;
   }
@@ -226,17 +293,25 @@ section {
     margin-bottom: -85px;
   }
 }
-
+@media(max-width: 875px) {
+  section {
+    background-position: 0 170px, -70px 40px;
+  }
+  .landingpage-img {
+    height: 368px;
+  }
+}
 @media (max-width: 752px) {
   section {
-    background-position: 0 73px, center 10px;
+    background-position: 0 80px, center -20px;
     background-size: cover, 60vh;
   }
   .first-sektion {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 55px;
+    gap: 65px;
+    padding-top: 50px;
   }
   .img-container {
     display: flex;
@@ -256,6 +331,9 @@ section {
   .job-name {
     padding-left: 75px;
   }
+  .img-container {
+    margin-top: -65px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -264,6 +342,12 @@ section {
   }
   .styled-line {
     width: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  section {
+    background-position: 0 50px, center -20px;
   }
 }
 
@@ -288,7 +372,8 @@ section {
 
 @media (max-width: 400px) {
   section {
-    background-position: 0 20px, center 10px;
+    background-position: 0 50px, center 10px;
+    background-size: cover, 55vh;
   }
   .text-container {
     padding-right: 40px;
@@ -320,9 +405,6 @@ section {
 }
 
 @media (max-width: 360px) {
-  // section {
-  //   background-position: 0 40px, center 10px;
-  // }
   .main-name {
     font-size: 21px;
   }
@@ -344,10 +426,6 @@ section {
     font-size: 17px;
     margin-bottom: -52px;
   }
-  // .Iam {
-  //   font-size: 23px;
-  //   margin-bottom: -73px;
-  // }
   .center-button {
     padding-left: 45px;
   }

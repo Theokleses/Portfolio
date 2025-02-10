@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import {
+  TranslatePipe,
+  TranslateDirective,
+  TranslateService,
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,TranslatePipe, TranslateDirective],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })

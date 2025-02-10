@@ -41,7 +41,7 @@ import { SwitchlanguageService } from '../../services/switchlanguage.service';
           <hr class="styled-line" />
           <a class="icons" href="https://github.com/Theokleses" target="_blank" rel="noopener noreferrer"><img src="./assets/img/github.png" /></a>
           <a class="icons" href="mailto:osahonschmolze222@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/mail.png" /></a>
-          <a class="icons" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/linked.png" /></a>
+          <a class="icons" href="https://www.linkedin.com/in/osahon-schmolze-0b51181a2/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/linked.png" /></a>
           <p>osahonschmolze222&#64;gmail.com</p>
         </div>
         <div class="scroll-down">

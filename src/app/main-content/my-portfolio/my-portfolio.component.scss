@@ -9,7 +9,7 @@ section {
   background-image: url("/../assets/img/second-purpel-shadow.png");
   background-repeat: no-repeat;
   background-position: -200px 880px;
-  @include contentmax();
+  // @include contentmax();
 }
 h2 {
   color: #9747ff;
@@ -160,7 +160,25 @@ button {
   .line-heigth {
     padding-bottom: 65px;
   }
+  .portfilio-main {
+    margin-left: -10px;
+  }
 
+}
+@media(max-width: 500px) {
+  .portfolio-description {
+    >p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .portfolio-description-reverse {
+    >p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+ 
 }
 @media (max-width: 450px) {
   .styled-line {
@@ -168,18 +186,6 @@ button {
   }
   .line-heigth {
     padding-bottom: 75px;
-  }
-  .portfolio-description {
-    >p {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-  .portfolio-description-reverse {
-    >p {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
   }
 
 }
@@ -202,6 +208,13 @@ button {
 }
 
 @media (max-width: 360px) {
+  section {
+    background-size: 425px;
+    background-position: -130px 815px;
+  }
+  button {
+    font-size: 16px;
+  }
   .span-gap {
     font-size: 18px;
   }
