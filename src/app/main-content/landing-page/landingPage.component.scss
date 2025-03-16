@@ -126,6 +126,10 @@ section {
     font-size: 50px;
     margin-bottom: -120px;
   }
+  .Iam-ge {
+    margin-bottom: -120px;
+    font-size: 35px;
+  }
   .job-name {
     > .job {
       font-size: 51px;
@@ -185,12 +189,12 @@ section {
   .landingpage-img {
     height: 540px;
   }
-  .text-container {
-    line-height: 1.2;
-  }
+  // .text-container {
+  //   line-height: 1.2;
+  // }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1212px) {
   .main-name {
     font-size: 50px;
   }
@@ -210,6 +214,10 @@ section {
   .Iam {
     margin-bottom: -109px;
   }
+  .Iam-ge {
+    margin-bottom: -102px;
+    font-size: 30px;
+  }
   .first-kontakt {
     margin-top: 20px;
   }
@@ -224,8 +232,8 @@ section {
   }
 
   .Iam-ge {
-    font-size: 33px;
-    margin-bottom: -111px;
+    font-size: 30px;
+    margin-bottom: -103px;
   }
   .text-container {
     padding-right: 75px;
@@ -238,7 +246,7 @@ section {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 990px) {
   section {
     background-position: 0 155px, -75px 15px;
   }
@@ -286,11 +294,11 @@ section {
   }
   .Iam {
     font-size: 32px;
-    margin-bottom: -75px;
+    margin-bottom: -72px;
   }
   .Iam-ge {
-    font-size: 28px;
-    margin-bottom: -85px;
+    font-size: 24px;
+    margin-bottom: -75px;
   }
 }
 @media(max-width: 875px) {
@@ -351,12 +359,16 @@ section {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 476px) {
   .main-name {
     font-size: 30px;
   }
   .Iam {
     margin-bottom: -68px;
+  }
+  .Iam-ge {
+    font-size: 20px;
+    margin-bottom: -63px;
   }
   .job-name {
     .job {
@@ -366,6 +378,25 @@ section {
   .job-name {
     .job-ge {
       font-size: 24px;
+    }
+  }
+}
+
+@media(max-width: 420px) {
+  .Iam {
+    margin-bottom: -63px;
+  }
+  .main-name {
+    font-size: 28px;
+  }
+  .job-name {
+    .job {
+      font-size: 24px;
+    }
+  }
+  .job-name {
+    .job-ge {
+      font-size: 23px;
     }
   }
 }
@@ -382,7 +413,7 @@ section {
     height: 350px;
   }
   .main-name {
-    font-size: 26px;
+    font-size: 25px;
   }
   .job-name {
     .job {
@@ -396,35 +427,35 @@ section {
   }
   .Iam {
     font-size: 23px;
-    margin-bottom: -55px;
+    margin-bottom: -48px;
   }
   .Iam-ge {
-    font-size: 20px;
-    margin-bottom: -60px;
+    font-size: 18px;
+    margin-bottom: -55px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 370px) {
   .main-name {
-    font-size: 21px;
+    font-size: 19px;
   }
   .job-name {
     > .job {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .job-name {
     > .job-ge {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .Iam {
-    font-size: 23px;
-    margin-bottom: -50px;
+    font-size: 20px;
+    margin-bottom: -43px;
   }
   .Iam-ge {
     font-size: 17px;
-    margin-bottom: -52px;
+    margin-bottom: -48px;
   }
   .center-button {
     padding-left: 45px;
@@ -432,4 +463,8 @@ section {
   .text-container {
     line-height: 1.2;
   }
+  .landingpage-img {
+    height: 330px;
+  }
 }
+

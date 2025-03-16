@@ -5,6 +5,7 @@ section {
   background-color: #141d2f;
   padding-top: 100px;
   padding-bottom: 200px;
+  overflow-x: hidden;
 }
 
 p {
@@ -216,7 +217,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .main-name {
     font-size: 60px;
   }
@@ -230,6 +231,21 @@ p {
   }
   .styled-text {
     padding-left: 0;
+  }
+  .icon-container {
+    width: 95px;
+  }
+}
+
+@media(max-width: 458px){
+  .icon-container {
+    width: 101px;
+  }
+}
+
+@media(max-width: 420px) {
+  .main-name {
+    font-size: 50px;
   }
 }
 

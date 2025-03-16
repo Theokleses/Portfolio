@@ -118,13 +118,13 @@ section {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .reference-img {
     width: 300px;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 565px) {
   .reference-gallery {
     padding-left: 0;
   }
@@ -133,5 +133,8 @@ section {
   }
   .styled-line {
     display: none;
+  }
+  .reference-img {
+    width: 285px;
   }
 }

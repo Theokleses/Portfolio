@@ -30,11 +30,18 @@ button {
   justify-content: end;
   gap: 90px;
 }
+
 .span-gap {
   padding-bottom: 20px;
   color: #70e61c;
   font-size: 23px;
   font-weight: 400;
+}
+
+.p-center {
+  z-index: 2;
+  position: relative;
+  text-align: center;
 }
 
 .livetest-button {
@@ -95,14 +102,21 @@ button {
 }
 
 .line-heigth {
-  padding-top: 10px; 
+  display: flex;
+  flex: 1; 
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.portfilio-main {
+.right-line {
+  @include styled-line(100px);
+}
+
+.portfolio-main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
   z-index: 2;
   position: relative;
 }
@@ -134,12 +148,6 @@ button {
   }
 }
 
-@media (max-width: 930px) {
-  .line-heigth {
-    padding-bottom: 50px;
-  }
-}
-
 @media (max-width: 650px) {
   section {
     background-size: 600px;
@@ -152,46 +160,47 @@ button {
     width: 400px;
   }
   .portfilio-main {
-    gap: 0;
+    gap: 10px;
   }
 }
 
 @media (max-width: 550px) {
-  .line-heigth {
-    padding-bottom: 65px;
-  }
   .portfilio-main {
     margin-left: -10px;
   }
-
 }
-@media(max-width: 500px) {
+
+@media (max-width: 520px) {
   .portfolio-description {
-    >p {
+    > p {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
   .portfolio-description-reverse {
-    >p {
+    > p {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
- 
+  .styled-line {
+    width: 70px;
+  }
 }
-@media (max-width: 450px) {
+@media (max-width: 460px) {
+  .portfilio-main {
+    gap: 20px;
+  }
   .styled-line {
     width: 50px;
   }
-  .line-heigth {
-    padding-bottom: 75px;
-  }
-
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
+  }
+  .portfolio-main {
+    gap: 8px;
   }
   .mockup-image {
     width: 300px;
@@ -224,5 +233,4 @@ button {
   .buttons-reverse {
     gap: 15px;
   }
-  
 }

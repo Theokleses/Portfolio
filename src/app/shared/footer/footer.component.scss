@@ -7,7 +7,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // @include contentmax();
+  @include contentmax();
 }
 span {
   font-size: 35px;
