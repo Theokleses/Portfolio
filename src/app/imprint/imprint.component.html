@@ -1,30 +1,27 @@
-<section>
-  <div class="impressum">
+<section class="contentmax">
+  <div class="impressum padding-100">
     <a routerLink="/">
-        <img
-          (mouseover)="hoverArrow('back', true)"
-          (mouseout)="hoverArrow('back', false)"
-          [src]="leftArrowSrc"
-          alt="Up-Arrow"
-        />
-      </a>
-    <h2>{{ 'impressum.title' | translate }}</h2>
-
+      <img
+        (mouseover)="hoverArrow('back', true)"
+        (mouseout)="hoverArrow('back', false)"
+        [src]="leftArrowSrc"
+        alt="Up-Arrow"
+      />
+    </a>
+    <h2>{{ "impressum.title" | translate }}</h2>
     <p>
       Osahon Schmolze<br />
       Klumpenstra&szlig;e 72<br />
       41066 M&ouml;nchengladbach
     </p>
 
-    <h2>{{ 'impressum.title-two' | translate }}</h2>
+    <h2>{{ "impressum.title-two" | translate }}</h2>
     <p>
-      {{ 'impressum.tel' | translate }}: 017685871002<br />
+      {{ "impressum.tel" | translate }}: 017685871002<br />
       osahonschmolze222&#64;gmail.com
     </p>
 
     <p>Quelle:<a href="https://www.e-recht24.de">e-recht24.de</a></p>
   </div>
-  <p>
-   
-  </p>
+  <p></p>
 </section>

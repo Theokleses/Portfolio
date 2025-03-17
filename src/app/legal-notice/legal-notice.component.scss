@@ -1,27 +1,73 @@
 @import "./../../styles.scss";
 section {
-    height: auto;
-    @include contentmax();
+  height: auto;
+  @include contentmax();
 }
 a {
-    color: #70E61C;
+  color: #70e61c;
 }
 h1 {
-    margin: 0;
-    padding-top: 30px;
-    font-size: 50px;
-    text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  font-size: 50px;
+  text-align: center;
+}
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h3,
+h4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.padding-100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+a.long-link {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 40px;
+    text-align: start;
+  }
+  .padding-100 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  a.long-link {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 30px;
+  }
+  a.long-link {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 25px;
   }
   h2 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 20px;
   }
-  h3, h4 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
   .padding-100 {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}

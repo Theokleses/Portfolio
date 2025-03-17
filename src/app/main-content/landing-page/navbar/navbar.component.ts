@@ -8,34 +8,36 @@ import {
 } from '@ngx-translate/core';
 import { SwitchlanguageService } from '../../../services/switchlanguage.service';
 
-
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink,TranslatePipe, TranslateDirective,],
+  imports: [CommonModule, RouterLink, TranslatePipe, TranslateDirective],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
   menuOpen = false;
-
-  toggleMenu() {
-      this.menuOpen = !this.menuOpen;
-  }
   selectedLanguage: string = 'en';
 
   switchlanguage = inject(SwitchlanguageService);
-  constructor(private translate: TranslateService) {}
-
-  toggleLanguage(): void {
-    this.selectedLanguage = this.selectedLanguage === 'en' ? 'de' : 'en';
+  constructor(private translate: TranslateService) {
+    this.selectedLanguage = this.switchlanguage.german ? 'de' : 'en';
     this.translate.use(this.selectedLanguage);
-    if (this.selectedLanguage == 'en') {
-        this.switchlanguage.german = false; 
-      
-    }else {
-      this.switchlanguage.german = true;
-    }
   }
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  setLanguage(language: string) {
+    if (this.selectedLanguage !== language) { 
+      this.selectedLanguage = language;
+      this.translate.use(this.selectedLanguage);
+      this.switchlanguage.german = this.selectedLanguage === 'de';
+    }
+  }
 }

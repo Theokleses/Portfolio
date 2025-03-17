@@ -1,32 +1,44 @@
-<section class="contentmax">
+<section id="about-me" class="contentmax">
   <div class="shadow-image">
-    <img src="/../assets/img/purple-shadow.png" alt="Purple-Shadow">
+    <img src="/../assets/img/purple-shadow.png" alt="Purple-Shadow" />
+  </div>
+  <div class="aboutme-container">
+    <p class="main-name pd-bot">{{ "about-me.title" | translate }}</p>
+  </div>
+
+  <div class="aboutme-main">
+    <div class="aboutme-line-container left-line">
+      <hr class="aboutme-line" />
     </div>
-    <div id="about-me" class="aboutme-container">
-      <!-- <p class="main-name pd-bot">About me</p> -->
-      <p class="main-name pd-bot">{{ 'about-me.title' | translate }}</p>
-      <div></div>
-  </div>  
-  <div class="aboutme-sektion">
-  <div class="aboutme-text">
-    <span>{{ 'about-me.first-text' | translate }}</span>
-    <table class="custom-table">
-      <tr>
-        <td><img src="./assets/img/location.png"></td>
-        <td>{{ 'about-me.location-text' | translate }}</td>
-      </tr>
-      <tr>
-        <td><img src="./assets/img/globe.png"></td>
-        <td>{{ 'about-me.lightbulb-text' | translate }}</td>
-      </tr>
-      <tr>
-        <td><img src="./assets/img/puzzle.png"></td>
-        <td>{{ 'about-me.puzzle-text' | translate }}</td>
-      </tr>
-    </table>
+
+    <div class="aboutme-content">
+      <div class="aboutme-text">
+        <div class="text-container">
+          <span>{{ "about-me.first-text" | translate }}</span>
+        </div>
+        <table class="custom-table">
+          <tr>
+            <td><img src="./assets/img/location.png" /></td>
+            <td>{{ "about-me.location-text" | translate }}</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/globe.png" /></td>
+            <td>{{ "about-me.lightbulb-text" | translate }}</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/puzzle.png" /></td>
+            <td>{{ "about-me.puzzle-text" | translate }}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="aboutme-image">
+        <img class="pos-image" src="./assets/img/aboutme-img.png" />
+      </div>
+    </div>
+
+    <div class="aboutme-line-container right-line">
+      <hr class="aboutme-line" />
+    </div>
   </div>
-  <div class="aboutme-image">
-    <img class="pos-image" src="./assets/img/aboutme-img.png">
-  </div>
-</div>
 </section>

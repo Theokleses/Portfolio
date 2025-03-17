@@ -9,7 +9,7 @@ import { SwitchlanguageService } from '../../services/switchlanguage.service';
   standalone: true,
   imports: [CommonModule, NavbarComponent,TranslatePipe, TranslateDirective],
   template: `
-    <section class="contentmax">
+    <section>
       <div class="first-sektion">
         <div class="img-container">
           <img class="landingpage-img" src="./assets/img/file.png" />

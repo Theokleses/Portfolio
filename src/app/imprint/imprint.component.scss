@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 section {
   height: 100vh;
+  @include contentmax();
 }
 
 h1,
@@ -16,4 +17,15 @@ p {
 }
 .impressum {
  padding-top: 30px;
+}
+.padding-100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media(max-width: 850px) {
+  .padding-100 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
