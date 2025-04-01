@@ -12,7 +12,7 @@ import { SwitchlanguageService } from '../../services/switchlanguage.service';
     <section>
       <div class="first-sektion">
         <div class="img-container">
-          <img class="landingpage-img" src="./assets/img/file.png" />
+          <img class="landingpage-img" src="./assets/img/landingpage-img.png" />
         </div>
         <div class="text-container">
           <div class="job-name">
