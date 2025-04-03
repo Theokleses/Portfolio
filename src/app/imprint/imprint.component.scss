@@ -1,6 +1,5 @@
 @import "../../styles.scss";
 section {
-  height: 100vh;
   @include contentmax();
 }
 
@@ -10,14 +9,17 @@ h2 {
   justify-content: center;
   margin: 0;
 }
+
 p {
   text-align: center;
   font-size: 16px;
   padding-bottom: 20px;
 }
+
 .impressum {
  padding-top: 30px;
 }
+
 .padding-100 {
   padding-left: 100px;
   padding-right: 100px;

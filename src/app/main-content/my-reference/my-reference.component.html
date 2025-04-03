@@ -1,44 +1,31 @@
-<!-- <section>
-    <div class="reference-section">
-      <div class="reference-gallery">
-        <img [src]="images[currentIndex]" alt="Current-Reference" />
-        <div class="arrow-section">
-          <img class="pd-r"
-            (click)="previousImage()"
-            (mouseover)="hoverArrow('left', true)"
-            (mouseout)="hoverArrow('left', false)"
-            [src]="leftArrowSrc"
-            alt="Left-Arrow"
-          />
-          <img
-            [src]="numberimages[currentIndexNumber]"
-            alt="Current-DotReference"
-          />
-          <img class="pd-l"
-            (click)="nextImage()"
-            (mouseover)="hoverArrow('right', true)"
-            (mouseout)="hoverArrow('right', false)"
-            [src]="rightArrowSrc"
-            alt="Right-Arrow"
-          />
-        </div>
-      </div>
-    </div>
-  </section> -->
-
 <section class="contentmax">
   <div class="shadow-image">
     <img src="/../assets/img/greenshadow-two.png" alt="Green-Shadow" />
   </div>
-  <div class="reference-section">
-    <div class="reference-gallery">
-      <!-- <div class="ref-icon">
-        <img src="assets/img/reference-icon.png" alt="Reference-Icon" />
-      </div> -->
-      <div class="line-height">
-        <img class="reference-img" [src]="getCurrentImage()" alt="Current-Reference" />
-        <hr class="styled-line" />
-      </div>
+      <div class="reference-section">
+        <div class="reference-gallery">
+          <div class="reference-with-circle">
+            <div class="line-height left-line"></div>
+            <div class="line-height">
+              <div class="reference-text">
+                {{ 'references.' + getCurrentReference().key + '.text' | translate }}
+                <div class="author-line-container">
+                  <hr class="styled-line" />
+                  <div class="reference-author">
+                    {{ 'references.' + getCurrentReference().key + '.author' | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="circle-line-container">
+              <div class="purple-circle">
+                <span class="placeholder-text">{{ getCurrentReference().placeholder }}</span>
+              </div>
+              <div class="line-height right-line">
+                <hr class="purple-line" />
+              </div>
+            </div>
+          </div>
       <div class="arrow-section">
         <img
           class="pd-r"
@@ -52,8 +39,9 @@
           <div class="dot" [class.active]="currentIndex === 0"></div>
           <div class="dot" [class.active]="currentIndex === 1"></div>
           <div class="dot" [class.active]="currentIndex === 2"></div>
+          <div class="dot" [class.active]="currentIndex === 3"></div>
+          <div class="dot" [class.active]="currentIndex === 4"></div>
         </div>
-        
         <img
           class="pd-l"
           (click)="nextImage()"
@@ -65,5 +53,4 @@
       </div>
     </div>
   </div>
-  
 </section>

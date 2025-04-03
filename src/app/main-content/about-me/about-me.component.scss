@@ -15,6 +15,9 @@ section {
   display: flex;
   justify-content: end;
   margin-top: -500px;
+  >img {
+    z-index: 1;
+  }
 }
 span {
   font-size: 16px;

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { SwitchlanguageService } from '../../services/switchlanguage.service';
 import {
   TranslatePipe,
@@ -11,7 +12,7 @@ import {
 @Component({
   selector: 'app-my-contact',
   standalone: true,
-  imports: [FormsModule, TranslatePipe, TranslateDirective],
+  imports: [FormsModule, TranslatePipe, TranslateDirective, RouterLink],
   templateUrl: './my-contact.component.html',
   styleUrl: './my-contact.component.scss',
 })
@@ -88,5 +89,9 @@ export class MyContactComponent {
     this.clickBoxSrc = this.isBoxClicked
       ? this.clickedBoxSrc
       : './assets/img/click-box.png';
+  }
+
+  scrollToTop(){
+    window.scrollTo({top: 0,  behavior: "auto"})
   }
 }

@@ -47,5 +47,29 @@
   },
   "legal-notice": {
     "section": ""
+  },
+
+  "references": {
+  "hendrik": {
+    "text": "Es war eine große Freude, mit Osa in unserer Gruppe bei DA zusammenzuarbeiten. Mit seiner freundlichen und zuverlässigen Art spielte er eine Schlüsselrolle dabei, dass unser Team schnell zusammenwuchs und unsere gemeinsamen Ziele erfolgreich erreichte. Darüber hinaus ging er immer mit Selbstvertrauen und großem Engagement an unsere Herausforderungen heran - ein entscheidender Faktor für die Moral und den Erfolg unseres Teams!",
+    "author": "H. Bischoping - Team Partner"
+  },
+  "marcel": {
+    "text": "Osahon ist ein unglaublich fleißiger und engagierter Teampartner. Seine Lernbereitschaft und sein Engagement sind beeindruckend, und er war immer hilfsbereit. Er bringt nicht nur technisches Know-how mit, sondern auch eine fantastische Teammentalität!",
+    "author": "M. Steffen - Team Partner"
+  },
+  "sascha": {
+    "text": "Osa überzeugt durch sein schnelles Auffassungsvermögen und seine Begeisterungsfähigkeit. Er passt sich erstaunlich schnell neuen Technologien und Ideen an und zeigt eine echte Leidenschaft für das, was er tut. Die Zusammenarbeit mit ihm macht einfach Spaß, weil er nicht nur hochmotiviert ist, sondern auch andere mit seiner positiven Energie ansteckt. Seine Lernbereitschaft und Offenheit machen ihn zu einem wertvollen Teammitglied, das sich kontinuierlich weiterentwickelt.",
+    "author": "S. Töpfer - Senior Developer"
+  },
+  "sinan": {
+    "text": "Die Zusammenarbeit mit Osa Schmolze war sehr angenehm, da er stets zuverlässig und kompetent agierte. Sein Beitrag hat das Softwareprojekt maßgeblich vorangebracht.",
+    "author": "S. Demir - Team Partner"
+  },
+  "mariia": {
+    "text": "Eine fleißige und wissbegierige Person, die ihren Kollegen immer unter die Arme greift.",
+    "author": "M. Ivanova - Team Partner"
   }
+}
+ 
 }

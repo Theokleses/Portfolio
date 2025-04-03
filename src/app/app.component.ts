@@ -10,13 +10,14 @@ import {
   TranslatePipe,
   TranslateDirective
 } from "@ngx-translate/core";
+import { ImprintComponent } from "./imprint/imprint.component";
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, FooterComponent, NavbarComponent, TranslateDirective],
+  imports: [CommonModule, RouterOutlet, MainContentComponent, FooterComponent, NavbarComponent, TranslateDirective, ImprintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

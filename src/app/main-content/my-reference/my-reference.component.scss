@@ -26,21 +26,12 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 70px;
   margin-top: -300px;
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
-.pd-r {
-  padding-right: 25px;
-  cursor: pointer;
-}
-.pd-l {
-  padding-left: 25px;
-  cursor: pointer;
-}
 .shadow-image {
   display: flex;
   justify-content: end;
@@ -58,7 +49,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 14px;
+  // margin-top: 14px;
 
   .dot {
     width: 12px;
@@ -84,6 +75,7 @@ section {
     }
   }
 }
+
 .styled-line {
   @include styled-line(150px);
 }
@@ -98,26 +90,26 @@ section {
   }
 }
 
-@media (max-width: 1099px) {
-  section {
-    padding-top: 30px;
+@media (max-width: 1200px) {
+  .reference-with-circle {
+    flex-direction: column-reverse;
+    gap: 50px !important;
   }
-  .reference-gallery {
-    gap: 0;
-    padding-left: 100px;
-  }
-  .reference-img {
-    width: 340px;
-  }
-  .line-height {
-    margin-bottom: 0;
+  .line-height.right-line {
+    >.purple-line {
+      width: 0%;
+    }
   }
   .arrow-section {
-    padding-top: 30px;
-    padding-right: 130px;
+    padding-top: 0 !important;
   }
 }
 
+@media (max-width: 650px) {
+  .reference-with-circle {
+    padding: 0 20px 0 20px;
+  }
+}
 @media (max-width: 610px) {
   .reference-img {
     width: 300px;
@@ -142,3 +134,129 @@ section {
   }
 }
 
+.reference-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reference-gallery {
+  text-align: center;
+  width: 100%;
+}
+
+.reference-with-circle {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  width: 100%; 
+  justify-content: center;
+}
+
+.reference-text {
+  border: 2px solid #00ff00; 
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #1a2a44; 
+  color: #ffffff; 
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+  height: 300px;
+  justify-content: space-between;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.author-line-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  width: 100%; 
+  align-self: flex-end; 
+}
+
+.styled-line {
+  border: 0;
+  height: 2px;
+  flex: 1; 
+  margin: 0; 
+}
+
+.reference-author {
+  color: #ffffff; 
+  font-size: 16px;
+  font-style: italic;
+  white-space: nowrap; 
+}
+
+.circle-line-container {
+  display: flex;
+  align-items: center;
+  flex: 1; 
+  min-width: 0; 
+}
+
+.purple-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #9747ff; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; 
+  font-size: 14px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.line-height.right-line {
+  display: flex;
+  flex: 1;
+  height: 5px;
+  align-items: center;
+  background-color: #9747ff;
+  min-width: 0;
+}
+
+.line-height.left-line {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background-color: transparent;
+  min-width: 0;
+}
+
+.purple-line {
+  border: 0;
+  height: 2px;
+  background: #9747ff; 
+  width: 100px; 
+  margin: 0;
+}
+
+.arrow-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.pd-r {
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.pd-l {
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.indicators {
+  display: flex;
+  gap: 15px;
+  // margin-top: 15px;
+}

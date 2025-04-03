@@ -4,6 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SwitchlanguageService {
-  german = false;
-  constructor() {}
+  private readonly LANGUAGE_KEY = 'selectedLanguage';
+  
+  constructor() {
+    if (!localStorage.getItem(this.LANGUAGE_KEY)) {
+      localStorage.setItem(this.LANGUAGE_KEY, 'en');
+    }
+  }
+
+  get german(): boolean {
+    return localStorage.getItem(this.LANGUAGE_KEY) === 'de';
+  }
+
+  set german(value: boolean) {
+    localStorage.setItem(this.LANGUAGE_KEY, value ? 'de' : 'en');
+  }
 }
