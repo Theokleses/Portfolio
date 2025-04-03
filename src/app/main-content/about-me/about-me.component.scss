@@ -15,12 +15,17 @@ section {
   display: flex;
   justify-content: end;
   margin-top: -500px;
-  >img {
+  > img {
     z-index: 1;
   }
 }
 span {
   font-size: 16px;
+}
+
+.aboutme-container {
+  position: relative;
+  z-index: 2;
 }
 .aboutme-text {
   max-width: 470px;
@@ -73,6 +78,8 @@ span {
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutme-line-container {
@@ -125,6 +132,10 @@ span {
   .pd-bot {
     padding-bottom: 20px;
   }
+  .shadow-image {
+    margin-top: -200px;
+    height: 600px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -133,3 +144,4 @@ span {
     padding-right: 10px;
   }
 }
+
