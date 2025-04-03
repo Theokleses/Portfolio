@@ -27,7 +27,9 @@
     "main-text": "Got a problem to solve?",
     "first-text": " Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "second-text": "Need a Frontend developer? <b>Contact me!</b>",
-    "privacy-text": "I've read the <span class=\"highlight\">privacy policy</span> and agree to the processing of my data as outlined."
+    "privacy-text": "I've read the <span class=\"highlight\">privacy policy</span> and agree to the processing of my data as outlined.",
+    "send-confirmation": "Message sent successfully :)",
+    "send-button": "Send message :)"
   },
   "my-navbar": {
     "first": "About me",
