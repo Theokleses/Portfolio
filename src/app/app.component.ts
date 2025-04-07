@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -21,22 +21,31 @@ import { ImprintComponent } from "./imprint/imprint.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements AfterViewInit{
   title = 'portfolio';
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
 }
-ngOnInit() {
+// ngOnInit() {
+//   AOS.init({
+//     duration: 1000, 
+//     once: false,    
+//     offset: 100,
+//     // disable: true    
+//   });
+//   setTimeout(() => {
+//     AOS.refresh();
+//   }, 100); 
+// }
+ngAfterViewInit() {  
   AOS.init({
-    duration: 1000, 
-    once: false,    
+    duration: 1000,
+    once: false,
     offset: 100,
-    // disable: true    
+    // disable: window.innerWidth < 768  // Auf Mobile deaktivieren
   });
-  setTimeout(() => {
-    AOS.refresh();
-  }, 100); 
+  setTimeout(() => AOS.refresh(), 500);
 }
 }
