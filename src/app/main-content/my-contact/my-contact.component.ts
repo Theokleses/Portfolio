@@ -8,19 +8,18 @@ import {
   TranslateDirective,
   TranslateService,
 } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-my-contact',
   standalone: true,
-  imports: [FormsModule, TranslatePipe, TranslateDirective, RouterLink],
+  imports: [FormsModule, TranslatePipe, TranslateDirective, RouterLink, CommonModule],
   templateUrl: './my-contact.component.html',
   styleUrl: './my-contact.component.scss',
 })
 export class MyContactComponent {
   switchlanguage = inject(SwitchlanguageService);
-
   http = inject(HttpClient);
-
   upArrowSrc = '/assets/img/arrow-up.png';
   upArrowHover = '/assets/img/arrow-up-hover.png';
 
@@ -84,12 +83,12 @@ export class MyContactComponent {
     }
   }
 
-  clickBox() {
-    this.isBoxClicked = !this.isBoxClicked;
-    this.clickBoxSrc = this.isBoxClicked
-      ? this.clickedBoxSrc
-      : './assets/img/click-box.png';
-  }
+  // clickBox() {
+  //   this.isBoxClicked = !this.isBoxClicked;
+  //   this.clickBoxSrc = this.isBoxClicked
+  //     ? this.clickedBoxSrc
+  //     : './assets/img/click-box.png';
+  // }
 
   scrollToTop(){
     window.scrollTo({top: 0,  behavior: "auto"})

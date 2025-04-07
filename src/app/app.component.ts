@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './main-content/landing-page/navbar/navbar.component';
-
+import AOS from 'aos';
 import {
   TranslateService,
   TranslatePipe,
@@ -21,11 +21,22 @@ import { ImprintComponent } from "./imprint/imprint.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portfolio';
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
+}
+ngOnInit() {
+  AOS.init({
+    duration: 1000, 
+    once: false,    
+    offset: 100,
+    // disable: true    
+  });
+  setTimeout(() => {
+    AOS.refresh();
+  }, 100); 
 }
 }

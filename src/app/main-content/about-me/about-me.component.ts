@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {
   TranslatePipe,
   TranslateDirective,
   TranslateService,
 } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about-me',
@@ -12,12 +13,12 @@ import {
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
-export class AboutMeComponent {
-  name = 'Andreas';
+export class AboutMeComponent implements OnInit, AfterViewInit {
 
-  // constructor(private translate: TranslateService) {}
-  // changeLangue(language: string) {
-  //   this.translate.use(language);
-  // }
+  ngOnInit() {
+  }
+  ngAfterViewInit() {
+    AOS.refresh(); 
+  }
 
 }

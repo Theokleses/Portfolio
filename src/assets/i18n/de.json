@@ -72,6 +72,19 @@
     "text": "Eine fleißige und wissbegierige Person, die ihren Kollegen immer unter die Arme greift.",
     "author": "M. Ivanova - Team Partner"
   }
-}
- 
+},
+
+  "contact-form": {
+    "name-placeholder": "Ihr Name",
+    "email-placeholder": "Ihre E-Mail",
+    "message-placeholder": "Ihre Nachricht",
+    "errors": {
+      "name-required": "Name ist erforderlich",
+      "email-required": "E-Mail ist erforderlich",
+      "email-pattern": "Bitte gültige E-Mail eingeben",
+      "message-required": "Nachricht ist erforderlich",
+      "message-minlength": "Mindestens 4 Zeichen benötigt",
+      "privacy-required": "Bitte akzeptieren Sie die Datenschutzrichtlinie"
+    }
+  }
 }

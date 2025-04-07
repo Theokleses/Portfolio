@@ -1,12 +1,14 @@
+@import 'aos/dist/aos.css';
 *{
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
+body, html{
   font-family: 'Poppins';
   color: #ffffff;
-  background-color: #141d2f; /* Oder eine andere gewünschte Farbe */
+  background-color: #141d2f;
+  overflow-x: hidden;
 }
 section {
   background-color: #141d2f;

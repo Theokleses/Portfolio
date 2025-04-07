@@ -4,6 +4,7 @@ section {
   font-family: "Poppins";
   padding-top: 30px;
   position: relative;
+  margin-top: 121px;
   &::before {
     content: "";
     position: absolute;
@@ -144,10 +145,11 @@ section {
   font-weight: 400;
   font-size: 23px;
   color: white;
-  margin-top: 50px;
   justify-content: space-between;
   z-index: 2;
   position: relative;
+  margin-top: 50px;
+  margin-top: 15px;
   @include contentmax();
   > img {
     z-index: 2;
@@ -370,7 +372,7 @@ section {
 }
 @media (max-width: 752px) {
   section {
-    padding-top: 0;
+    // padding-top: 10px;
   }
   .first-sektion {
     display: flex;

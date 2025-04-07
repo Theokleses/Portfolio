@@ -69,6 +69,19 @@
     "text": "A hardworking and inquisitive person who always gives a hand to his colleagues.",
     "author": "M. Ivanova - Team Partner"
   }
-}
+},
 
+  "contact-form": {
+    "name-placeholder": "Your name",
+    "email-placeholder": "Your email",
+    "message-placeholder": "Your message",
+    "errors": {
+      "name-required": "Your name is required",
+      "email-required": "Your email is required",
+      "email-pattern": "Please enter a valid email",
+      "message-required": "Your message is required",
+      "message-minlength": "At least 4 characters required",
+      "privacy-required": "Please accept the privacy policy"
+    }
+  }
 }
