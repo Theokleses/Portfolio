@@ -12,20 +12,20 @@
     "styled-text": "Suchst du nach einer anderen Fähigkeit?",
     "first-text": "Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.",
     "second-text": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
-    "myskills-button": "Nimm Kontakt auf"
+    "myskills-button": "Kontaktiere mich"
   },
   "my-portfolio": {
     "title": "Projekte",
-    "first-text": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "first-text": "Entdecke hier eine Auswahl meiner Arbeiten – interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     "pokedex-text": "Basierend auf der PokéAPI: Eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
-    "elp-text": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Schwertwal zu kämpfen.",
+    "elp-text": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
     "join-text": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mithilfe von Drag-and-Drop-Funktionen und weise Benutzer sowie Kategorien zu.",
     "dabubble-text": "Diese App ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robusten Kanalorganisation."
   },
   "my-contact": {
-    "title": "Kontakt",
-    "main-text": "Hast du ein Problem zu lösen?",
-    "first-text":"Kontaktieren Sie mich über dieses Formular, ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "title":"Kontakt",
+    "main-text":"Hast du ein Problem zu lösen?",
+    "first-text":"Kontaktiere mich über dieses Formular, ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
     "second-text":"Brauchst du einen Frontend-Entwickler? <b>Kontaktiere mich!</b>",
     "privacy-text":"Ich habe die <span class=\"highlight\">Datenschutzrichtlinie</span> gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
     "send-confirmation": "Nachricht wurde versendet :)",

@@ -149,7 +149,7 @@ section {
   z-index: 2;
   position: relative;
   margin-top: 50px;
-  margin-top: 15px;
+  margin-top: 23px;
   @include contentmax();
   > img {
     z-index: 2;
@@ -307,10 +307,6 @@ section {
   }
 }
 @media (max-width: 999px) {
-  section {
-    // background-position: 0 155px, -75px 15px;
-    // padding-top: 0;
-  }
   .text-container {
     padding-right: 50px;
   }
@@ -329,17 +325,6 @@ section {
 }
 
 @media (max-width: 930px) {
-  section {
-    // height:60vh;
-    // background-position: 0 170px, -85px 40px;
-  }
-  // .first-sektion {
-  //   padding-top: 40px;
-
-  // }
-  // .landingpage-img {
-  //   height: 400px;
-  // }
   .main-name {
     font-size: 36px;
   }
@@ -371,9 +356,6 @@ section {
   }
 }
 @media (max-width: 752px) {
-  section {
-    // padding-top: 10px;
-  }
   .first-sektion {
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -38,24 +38,27 @@ export class MyContactComponent {
 
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://osahonschmolze.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      responseType: 'text' as const,
     },
   };
-
+  
   onSubmit(ngForm: NgForm) {
-    this.sendMessage = true;
-    if (ngForm.submitted && ngForm.form.valid && !this.isBoxClicked) {
+    if (ngForm.submitted && ngForm.form.valid && this.isBoxClicked) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.sendMessage = true;
+            setTimeout(() => {
+              this.sendMessage = false;
+            }, 5000);
           },
           error: (error) => {
             console.error(error);
@@ -65,13 +68,6 @@ export class MyContactComponent {
             this.isBoxClicked = false;
           },
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.isBoxClicked) {
-      ngForm.resetForm();
-      this.isBoxClicked = false;
-      this.clickBoxSrc = './assets/img/click-box.png';
-      setTimeout(() => {
-        this.sendMessage = false;
-      }, 5000);
     }
   }
 
@@ -82,14 +78,7 @@ export class MyContactComponent {
         : '/assets/img/arrow-up.png';
     }
   }
-
-  // clickBox() {
-  //   this.isBoxClicked = !this.isBoxClicked;
-  //   this.clickBoxSrc = this.isBoxClicked
-  //     ? this.clickedBoxSrc
-  //     : './assets/img/click-box.png';
-  // }
-
+  
   scrollToTop(){
     window.scrollTo({top: 0,  behavior: "auto"})
   }

@@ -1,31 +1,31 @@
 {
   "about-me": {
-    "hello": "hello {{name}}",
-    "title": "About me",
-    "first-text": "Hi, I’m a german speaking Frontend Developer based near Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+    "hello": "Hello {{name}}",
+    "title": "About Me",
+    "first-text": "Hi, I’m a German-speaking frontend developer based near Munich. Driven by the endless possibilities in IT, I love creating visually stunning and user-friendly websites and applications.",
     "location-text": "Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.",
     "lightbulb-text": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
-    "puzzle-text": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+    "puzzle-text": "To me, programming is more than just writing code – it’s a creative way to solve problems. I enjoy turning complex technical challenges into simple, user-friendly solutions, helping you bring your goals and visions to life."
   },
   "my-skills": {
     "title": "My skills",
     "styled-text": "Looking for <span class=highlight>another skill</span>?",
     "first-text": "I have gained experience in building projects with different frontend technologies and concepts.",
-    "second-text": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "second-text": "Feel free to contact me. I’d love to keep expanding my knowledge.",
     "myskills-button": "Get in touch"
   },
   "my-portfolio": {
     "title": "Portfolio",
-    "first-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "first-text": "Check out a selection of my work here – dive into the projects to see my skills in action.",
     "pokedex-text": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-    "elp-text": " A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.",
-    "join-text": "  Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "elp-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen",
+    "join-text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "dabubble-text": " This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
   },
   "my-contact": {
     "title": "Contact",
     "main-text": "Got a problem to solve?",
-    "first-text": " Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "first-text": "Reach out via this form – I’m excited to hear from you, learn about your ideas, and contribute to your projects with my work.",
     "second-text": "Need a Frontend developer? <b>Contact me!</b>",
     "privacy-text": "I've read the <span class=\"highlight\">privacy policy</span> and agree to the processing of my data as outlined.",
     "send-confirmation": "Message sent successfully :)",
