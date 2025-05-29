@@ -19,7 +19,7 @@
       <div class="contact-input">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
           <div class="input-wrapper">
-        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" class="styled-input" type="text"  [placeholder]="'contact-form.name-placeholder' | translate" required/>
+        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" class="styled-input" type="text" [placeholder]="'contact-form.name-placeholder' | translate"  autocomplete="name" required/>
           @if(!name.valid && name.touched){
             <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
             <span>{{ 'contact-form.errors.name-required' | translate }}</span>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="input-wrapper">
-        <input #mail="ngModel" [(ngModel)]="contactData.email" name="email" class="styled-input" type="text" id="email"    [placeholder]="'contact-form.email-placeholder' | translate"  required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+        <input #mail="ngModel" [(ngModel)]="contactData.email" name="email" class="styled-input" type="email" id="email" [placeholder]="'contact-form.email-placeholder' | translate" autocomplete="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
           @if(!mail.valid && mail.touched){
             <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
             <span>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="input-wrapper">
-          <input #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" id="email"  [placeholder]="'contact-form.message-placeholder' | translate" required/>
+          <input #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" [placeholder]="'contact-form.message-placeholder' | translate" autocomplete="off" required/>
           @if (!message.valid && message.touched) { 
             <img src="./assets/img/error-icon.png" class="error-icon-message" alt="Error">
             <span>
