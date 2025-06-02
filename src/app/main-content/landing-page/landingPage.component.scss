@@ -171,6 +171,15 @@ section {
   }
 }
 
+.mail {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    color: #9747ff;
+    transform: scale(1.04); 
+  }
+}
+
 .left-sektion {
   display: flex;
   align-items: center;
