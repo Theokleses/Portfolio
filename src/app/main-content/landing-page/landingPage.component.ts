@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 import { SwitchlanguageService } from '../../services/switchlanguage.service';
+
 
 @Component({
   selector: 'app-landing-Page',
@@ -37,7 +38,7 @@ import { SwitchlanguageService } from '../../services/switchlanguage.service';
         </div>
       </div>
 
-      <div class="first-kontakt">
+      <div class="first-kontakt" [style.margin-top]="getDynamicMargin()">
         <div class="left-sektion">
           <hr class="styled-line" />
           <a class="icons" href="https://github.com/Theokleses" target="_blank" rel="noopener noreferrer"><img src="./assets/img/github.png" /></a>
@@ -54,5 +55,49 @@ import { SwitchlanguageService } from '../../services/switchlanguage.service';
   styleUrls: ['./landingPage.component.scss'],
 })
 export class LandPageComponent {
-   switchlanguage = inject(SwitchlanguageService);
+  switchlanguage = inject(SwitchlanguageService);
+  hasBookmarksBar = false;
+  browserType: 'brave' | 'edge' | 'firefox' | 'other' = 'other';
+
+  ngOnInit() {
+    this.detectBrowser();
+    this.checkViewportHeight();
+  }
+
+  private detectBrowser() {
+    const ua = navigator.userAgent;
+    if ((navigator as any).brave !== undefined || ua.includes('Brave')) {
+      this.browserType = 'brave';
+    } else if (ua.includes('Edg')) {
+      this.browserType = 'edge';
+    } else if (ua.includes('Firefox')) {
+      this.browserType = 'firefox';
+    }
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkViewportHeight();
+  }
+
+  private checkViewportHeight() {
+  let threshold = this.browserType == 'brave' 
+    ? 0.65 * window.screen.availHeight 
+    : 0.9 * window.screen.availHeight;
+    this.hasBookmarksBar = window.innerHeight < threshold;
+  }
+
+  getDynamicMargin(): string {
+    switch (this.browserType) {
+      case 'brave':
+        return this.hasBookmarksBar ? '0' : '30px';
+      case 'edge':
+        return this.hasBookmarksBar ? '5px' : '35px';
+      case 'firefox':
+        return this.hasBookmarksBar ? '0px' : '25px';
+      default:
+        return this.hasBookmarksBar ? '-10px' : '23px';
+    }
+  }
 }
+
