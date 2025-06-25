@@ -1,4 +1,8 @@
 @import "../../../styles.scss";
+:host {
+  overflow: hidden;
+}
+
 section {
   padding-left: 100px;
   padding-right: 100px;
@@ -9,6 +13,7 @@ section {
   align-items: center;
   @include contentmax();
 }
+
 span {
   font-size: 35px;
 }
@@ -17,30 +22,29 @@ span {
   font-weight: bold;
   line-height: 1.2;
   margin-top: 15px;
- 
 }
-.legal-section{
+
+.legal-section {
   display: flex;
   gap: 10px;
   > a {
     font-weight: normal;
     font-size: 13px;
     &:hover {
-      text-decoration: underline; 
-      text-decoration-color: #70e61c; 
+      text-decoration: underline;
+      text-decoration-color: #70e61c;
       text-decoration-thickness: 3px;
-      text-underline-offset: 5px
-      // color: #70e61c;
+      text-underline-offset: 5px;
     }
   }
 }
+
 .social-icons {
   display: flex;
   gap: 30px;
 }
 
-
-@media (max-width:850px ) {
+@media (max-width: 850px) {
   section {
     flex-direction: column;
     padding-top: 30px;

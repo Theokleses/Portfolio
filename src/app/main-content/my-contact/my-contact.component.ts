@@ -82,4 +82,11 @@ export class MyContactComponent {
   scrollToTop(){
     window.scrollTo({top: 0,  behavior: "auto"})
   }
+
+  navigateTo(sectionId: string) {
+    let element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({behavior: 'smooth'});
+    }
+  }
 }

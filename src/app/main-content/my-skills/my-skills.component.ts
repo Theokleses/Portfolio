@@ -17,6 +17,12 @@ import {
 })
 export class MySKillsComponent {
   
-   switchlanguage = inject(SwitchlanguageService);
+  switchlanguage = inject(SwitchlanguageService);
 
+  navigateTo(sectionId: string) {
+    let element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({behavior: 'smooth'});
+    }
+  }
 }

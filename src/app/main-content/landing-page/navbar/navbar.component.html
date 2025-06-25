@@ -1,7 +1,8 @@
 <nav class="contentmax" data-aos="fade-down" data-aos-delay="100">
+  <div class="nav-container">
   <div class="left-sektion">
     <p class="fontNunito-Sans">
-      <a href="#navbar">
+      <a (click)="navigateTo('#navbar')">
         <span>Os</span>
         <span class="split split-o">a</span>
         <span>ho</span>
@@ -23,15 +24,18 @@
   </div>
 </div>
 
-    <div class="menu fontPoppins" [ngClass]="{ show: menuOpen }">
-      <a href="#about-me" (click)="closeMenu()">{{ "my-navbar.first" | translate }}</a>
-      <a href="#my-skills" (click)="closeMenu()">{{ "my-navbar.second" | translate }}</a>
-      <a href="#my-portfolio" (click)="closeMenu()">{{ "my-navbar.third" | translate }}</a>
-      <a href="#my-contact" class="hamburger-only" (click)="closeMenu()">{{
-        "my-navbar.fourth" | translate
-      }}</a>
+  <div class="menu fontPoppins" [ngClass]="{ show: menuOpen }">
+    <a (click)="navigateTo('#about-me')">{{ "my-navbar.first" | translate }}</a>
+    <a (click)="navigateTo('#my-skills')">{{ "my-navbar.second" | translate }}</a>
+    <a (click)="navigateTo('#my-portfolio')">{{ "my-navbar.third" | translate }}</a>
+    <a class="hamburger-only" (click)="navigateTo('#my-reference')">{{ "my-navbar.fifth" | translate }}</a>
+    <a class="hamburger-only" (click)="navigateTo('#my-contact')">{{ "my-navbar.fourth" | translate }}</a>
   </div>
   <button class="hamburger" aria-label="Menu" (click)="toggleMenu()">
-    <img src="./assets/img/hamburger-icon.png" alt="Hamburger-Icon" />
+    <div class="icon-container" [class.rotate]="menuOpen">
+    <img *ngIf="!menuOpen" src="./assets/img/hamburger-icon.png" alt="Hamburger-Icon" />
+    <img *ngIf="menuOpen" src="./assets/img/close.png" alt="Close-icon" />
+    </div>
   </button>
+  </div>
 </nav>

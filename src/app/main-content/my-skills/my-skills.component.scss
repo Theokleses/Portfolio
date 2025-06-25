@@ -11,12 +11,14 @@ section {
 p {
   font-weight: bold;
 }
+
 .mySkills-text {
   width: 500px;
   > p {
     text-align: end;
   }
 }
+
 .dp-flex {
   display: flex;
   justify-content: space-around;
@@ -24,23 +26,27 @@ p {
   position: relative;
   @include contentmax();
 }
+
 .right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   max-width: 475px;
 }
+
 .main-name {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 20px;
 }
+
 .main-name-ge {
   font-size: 50px;
   padding-bottom: 25px;
   display: flex;
   justify-content: flex-end;
 }
+
 .normal-text {
   font-weight: 400;
   font-size: 16px;
@@ -48,11 +54,13 @@ p {
   max-width: 470px;
   text-align: end;
 }
+
 .styled-text {
   font-weight: 700;
   font-size: 32px;
   padding-bottom: 10px;
 }
+
 .styled-text-ge {
   font-size: 22px;
   font-weight: 700;
@@ -63,14 +71,17 @@ p {
   color: #9747ff;
   font-weight: bold;
 }
+
 .highlight-p {
   color: #9747ff;
 }
+
 .rightb {
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
 }
+
 .firstIcon-line {
   display: flex;
   gap: 50px;
@@ -81,6 +92,7 @@ p {
   flex-flow: row wrap;
   width: 550px;
 }
+
 .line-heigth {
   padding-top: 70px;
 }
@@ -98,13 +110,24 @@ p {
     padding-top: 5px;
   }
 }
+
 .icon-container img {
   transition: transform 0.3s ease;
 }
 
 .icon-container:hover img {
-  transform: translateY(-10px);
+  animation: floatUpDown 1s ease-in-out infinite;
 }
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 .icon-containerNohover {
   display: flex;
   flex-direction: column;
@@ -116,8 +139,6 @@ p {
 }
 
 .icon-containerNohover:hover {
-  //  z-index: 1;
-  //  position: relative;
   height: 100px;
 }
 
@@ -134,28 +155,12 @@ p {
   display: inline-block;
 }
 
-// .toolbar {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   top: -115px;
-//   right: 0;
-//   text-align: center;
-//   width: max-content;
-//   clip-path: inset(100% 0 0 0);
-//   transition: clip-path 0.3s ease;
-// }
-
-// .icon-container {
-//   &:hover > .toolbar {
-//     clip-path: inset(-150px 0 0 0);
-//   }
-// }
 .icon-container {
   &:hover > .highlight-p {
     color: white;
   }
 }
+
 .toolbar {
   position: absolute;
   bottom: 0;
@@ -195,15 +200,12 @@ p {
   .main-name {
     order: -1;
   }
-
   .normal-text:first-of-type {
     order: 2;
   }
-
   .firstIcon-line {
     order: 3;
   }
-
   .styled-text,
   .normal-text:last-of-type,
   .rightb {
@@ -217,33 +219,41 @@ p {
   }
 }
 
+@media (max-width: 750px) {
+  section {
+    padding-top: 115px;
+    padding-bottom: 100px;
+  }
+}
+
 @media (max-width: 610px) {
   .main-name {
     font-size: 60px;
   }
   .firstIcon-line {
-   padding-left: 20px;
-   padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .normal-text {
     text-align: center;
     max-width: 380px;
   }
   .styled-text {
-    padding-left: 0;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .icon-container {
     width: 95px;
   }
 }
 
-@media(max-width: 458px){
+@media (max-width: 458px) {
   .icon-container {
     width: 101px;
   }
 }
 
-@media(max-width: 420px) {
+@media (max-width: 420px) {
   .main-name {
     font-size: 50px;
   }

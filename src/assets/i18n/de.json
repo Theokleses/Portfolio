@@ -2,8 +2,8 @@
   "about-me": {
     "hello": "Guten Tag {{name}}",
     "title": "Über mich ",
-    "first-text": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus der Nähe von München. Angetrieben von den unendlichen Möglichkeiten der IT, begeistert es mich, visuell ansprechende und benutzerfreundliche Websites und Anwendungen zu gestalten.",
-    "location-text": "Flexibel in der Arbeitsweise – ich kann sowohl vor Ort in München als auch remote effizient arbeiten.",
+    "first-text": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus der Nähe von Düsseldorf. Angetrieben von den unendlichen Möglichkeiten der IT, begeistert es mich, visuell ansprechende und benutzerfreundliche Websites und Anwendungen zu gestalten.",
+    "location-text": "Flexibel in der Arbeitsweise – ich kann sowohl vor Ort in Mönchengladbach als auch remote effizient arbeiten.",
     "lightbulb-text": "Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.",
     "puzzle-text": "Für mich ist Programmieren mehr als nur Code schreiben – es ist eine kreative Art, Probleme zu lösen. Ich lege großen Wert darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So unterstütze ich dich dabei, deine Ziele zu erreichen und deine Visionen zum Leben zu erwecken."
   },
@@ -35,7 +35,8 @@
     "first":"Über mich",
     "second":"Fähigkeiten",
     "third": "Projekte",
-    "fourth": "Kontakt"
+    "fourth": "Kontakt",
+    "fifth": "Referenzen"
   },
   "landing-page": {
     "first":"Ich bin",

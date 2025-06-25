@@ -1,8 +1,8 @@
 @import 'aos/dist/aos.css';
 *{
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body, html{
   font-family: 'Poppins';
@@ -41,6 +41,19 @@ button:hover {
   background-color: #9747FF;
   transform: scale(1.05);
 } 
+
+#about-me {
+  scroll-margin-top: 100px; 
+}
+
+@media (max-width: 750px) {
+  #about-me {
+    scroll-margin-top: -50px;
+  }
+  #my-reference {
+    scroll-margin-top: 10px;
+  }
+}
 
 .main-name {
   font-size: 90px;

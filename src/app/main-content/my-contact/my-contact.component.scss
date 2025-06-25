@@ -14,11 +14,13 @@ h2 {
   font-size: 32px;
   padding-bottom: 20px;
 }
+
 span {
   margin-top: -23px;
   color: red;
   font-size: 12px;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -49,12 +51,14 @@ input {
     padding-top: 15px;
   }
 }
+
 .my-contact {
   display: flex;
   justify-content: center;
   padding-top: 50px;
   gap: 150px;
 }
+
 .contact-line {
   display: flex;
   align-items: center;
@@ -62,6 +66,7 @@ input {
   gap: 35px;
   width: 55%;
 }
+
 .styled-input::placeholder {
   color: #ffffff;
   font-size: 16px;
@@ -73,6 +78,7 @@ input {
   border: none;
   background-color: #9747ff;
 }
+
 .styled-input {
   width: 100%;
   padding: 15px 25px;
@@ -83,15 +89,13 @@ input {
     border-color: red;
   }
 }
-// .input-wrapper {
-//   position: relative;
-//   width: 100%;
-// }
+
 .input-icon {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
+
 .pd-bot {
   padding-bottom: 150px;
 }
@@ -106,6 +110,7 @@ input {
     color: #9747ff;
   }
 }
+
 .privacy-line {
   display: flex;
   align-items: center;
@@ -114,6 +119,7 @@ input {
   margin-right: 10px;
   padding-bottom: 40px;
 }
+
 .privacy-text {
   display: flex;
   align-items: center;
@@ -123,9 +129,11 @@ input {
     cursor: pointer;
   }
 }
+
 .highlight {
   color: #9747ff !important;
 }
+
 .arrow-up {
   display: flex;
   justify-content: end;
@@ -136,21 +144,23 @@ input {
     }
   }
 }
+
 .green-line {
   background-color: #70e61c;
   width: 100%;
   height: 4px;
   border: none;
 }
+
 span {
   color: red;
   font-weight: bold;
 }
+
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
   opacity: 0.6;
-  // pointer-events: none;
   transition: none;
   transform: none;
 }
@@ -158,9 +168,11 @@ button:disabled {
 .input-wrapper {
   position: relative;
 }
+
 b {
   background-color: red;
 }
+
 .error-icon {
   position: absolute;
   right: 25px;
@@ -178,6 +190,7 @@ b {
   width: 28px;
   height: 28px;
 }
+
 .error-icon-message {
   position: absolute;
   right: 25px;
@@ -186,6 +199,7 @@ b {
   width: 28px;
   height: 28px;
 }
+
 .success-icon-message {
   position: absolute;
   right: 25px;
@@ -194,9 +208,11 @@ b {
   width: 28px;
   height: 28px;
 }
+
 .ge-text {
   width: 550px;
 }
+
 .message-send {
   font-weight: bold;
   font-size: 16px;
@@ -205,7 +221,6 @@ b {
   border-radius: 10px;
   background-color: #9747ff;
   color: white;
-
   animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -227,21 +242,19 @@ b {
 
 .line-heigth {
   display: flex;
-  flex: 1; 
+  flex: 1;
   align-items: center;
   justify-content: flex-end;
 }
 
-
-
 .hidden-checkbox {
   position: absolute;
   opacity: 0;
-  width: 24px;  
+  width: 24px;
   height: 24px;
   margin: 0;
   cursor: pointer;
-  z-index: 1;   
+  z-index: 1;
 }
 
 @keyframes popIn {
@@ -316,7 +329,7 @@ b {
 
 @media (max-width: 560px) {
   section {
-    background-position: -100px 450px;
+    background-position: -100px 700px;
   }
   .arrow-up {
     padding-bottom: 20px;
@@ -324,7 +337,7 @@ b {
 }
 @media (max-width: 500px) {
   section {
-    background-position: -100px 870px;
+    background-position: -100px 800px;
   }
   .contact-line {
     gap: 0;
@@ -334,6 +347,6 @@ b {
 
 @media (max-width: 350px) {
   section {
-    background-position: -100px 1010px;
+    background-position: -100px 885px;
   }
 }

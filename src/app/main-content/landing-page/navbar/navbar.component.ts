@@ -34,10 +34,18 @@ export class NavbarComponent {
   }
 
   setLanguage(language: string) {
-    if (this.selectedLanguage !== language) { 
+    if (this.selectedLanguage !== language) {
       this.selectedLanguage = language;
       this.translate.use(this.selectedLanguage);
       this.switchlanguage.german = this.selectedLanguage === 'de';
+    }
+  }
+
+  navigateTo(sectionId: string) {
+    this.menuOpen = false;
+    let element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

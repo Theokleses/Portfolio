@@ -2,8 +2,8 @@
   "about-me": {
     "hello": "Hello {{name}}",
     "title": "About Me",
-    "first-text": "Hi, I’m a German-speaking frontend developer based near Munich. Driven by the endless possibilities in IT, I love creating visually stunning and user-friendly websites and applications.",
-    "location-text": "Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.",
+    "first-text": "Hi, I’m a German-speaking frontend developer based near Düsseldorf. Driven by the endless possibilities in IT, I love creating visually stunning and user-friendly websites and applications.",
+    "location-text": "Flexible in terms of working environments, I can work effectively both on-site in Mönchengladbach and remotely.",
     "lightbulb-text": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
     "puzzle-text": "To me, programming is more than just writing code – it’s a creative way to solve problems. I enjoy turning complex technical challenges into simple, user-friendly solutions, helping you bring your goals and visions to life."
   },
@@ -35,7 +35,8 @@
     "first": "About me",
     "second": "Skills",
     "third": "Portfolio",
-    "fourth": "Contact"
+    "fourth": "Contact",
+    "fifth": "References"
   },
   "landing-page": {
     "first": "I am",

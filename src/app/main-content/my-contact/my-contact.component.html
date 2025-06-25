@@ -1,106 +1,192 @@
 <section class="contentmax">
   <div class="contact-main" data-aos="fade-right">
-  <div class="line-heigth left-line">
-    <hr class="styled-line " />
+    <div class="line-heigth left-line">
+      <hr class="styled-line" />
+    </div>
+    <div class="center">
+      <h1>{{ "my-contact.title" | translate }}</h1>
+    </div>
+    <div class="line-heigth right-line"></div>
   </div>
-  <div class="center">
-  <h1>{{ 'my-contact.title' | translate }}</h1>
-</div>
-  <div class="line-heigth right-line"></div>
-</div>
   <div class="my-contact" data-aos="fade-right">
     <div class="contact-text">
-      <h2>{{ 'my-contact.main-text' | translate }}</h2>
+      <h2>{{ "my-contact.main-text" | translate }}</h2>
       <p>
-        {{ 'my-contact.first-text' | translate }}
+        {{ "my-contact.first-text" | translate }}
       </p>
-      <p [innerHTML]="'my-contact.second-text' | translate"> </p>
+      <p [innerHTML]="'my-contact.second-text' | translate"></p>
     </div>
-      <div class="contact-input">
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-          <div class="input-wrapper">
-        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" class="styled-input" type="text" [placeholder]="'contact-form.name-placeholder' | translate"  autocomplete="name" required/>
+    <div class="contact-input">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="input-wrapper">
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            name="name"
+            class="styled-input"
+            type="text"
+            [placeholder]="'contact-form.name-placeholder' | translate"
+            autocomplete="name"
+            required
+          />
           @if(!name.valid && name.touched){
-            <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
-            <span>{{ 'contact-form.errors.name-required' | translate }}</span>
-          } 
-          @if (name.valid && name.value) {
-            <img src="./assets/img/submit-icon.png" class="success-icon" alt="Submit">
+          <img
+            src="./assets/img/error-icon.png"
+            class="error-icon"
+            alt="Error"
+          />
+          <span>{{ "contact-form.errors.name-required" | translate }}</span>
+          } @if (name.valid && name.value) {
+          <img
+            src="./assets/img/submit-icon.png"
+            class="success-icon"
+            alt="Submit"
+          />
           }
         </div>
 
         <div class="input-wrapper">
-        <input #mail="ngModel" [(ngModel)]="contactData.email" name="email" class="styled-input" type="email" id="email" [placeholder]="'contact-form.email-placeholder' | translate" autocomplete="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+          <input
+            #mail="ngModel"
+            [(ngModel)]="contactData.email"
+            name="email"
+            class="styled-input"
+            type="email"
+            id="email"
+            [placeholder]="'contact-form.email-placeholder' | translate"
+            autocomplete="email"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
           @if(!mail.valid && mail.touched){
-            <img src="./assets/img/error-icon.png" class="error-icon" alt="Error">
-            <span>
-              {{ mail.errors?.['required'] ? 
+          <img
+            src="./assets/img/error-icon.png"
+            class="error-icon"
+            alt="Error"
+          />
+          <span>
+            {{ mail.errors?.['required'] ? 
                  ('contact-form.errors.email-required' | translate) : 
                  ('contact-form.errors.email-pattern' | translate) }}
-            </span>
-          }
-          @if (mail.valid && mail.value) {
-            <img src="./assets/img/submit-icon.png" class="success-icon" alt="Submit">
+          </span>
+          } @if (mail.valid && mail.value) {
+          <img
+            src="./assets/img/submit-icon.png"
+            class="success-icon"
+            alt="Submit"
+          />
           }
         </div>
 
         <div class="input-wrapper">
-          <input #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" class="styled-input pd-bot" type="text" [placeholder]="'contact-form.message-placeholder' | translate" autocomplete="off" required/>
-          @if (!message.valid && message.touched) { 
-            <img src="./assets/img/error-icon.png" class="error-icon-message" alt="Error">
-            <span>
-              {{ !message.value ? 
-                 ('contact-form.errors.message-required' | translate) : 
-                 ('contact-form.errors.message-minlength' | translate) }}
-            </span>
-          }
-          @if (message.valid && message.value) {
-            <img src="./assets/img/submit-icon.png" class="success-icon-message" alt="Submit">
+          <input
+            #message="ngModel"
+            minlength="4"
+            [(ngModel)]="contactData.message"
+            name="message"
+            class="styled-input pd-bot"
+            type="text"
+            [placeholder]="'contact-form.message-placeholder' | translate"
+            autocomplete="off"
+            required
+          />
+          @if (!message.valid && message.touched) {
+          <img
+            src="./assets/img/error-icon.png"
+            class="error-icon-message"
+            alt="Error"
+          />
+          <span>
+            {{
+              !message.value
+                ? ("contact-form.errors.message-required" | translate)
+                : ("contact-form.errors.message-minlength" | translate)
+            }}
+          </span>
+          } @if (message.valid && message.value) {
+          <img
+            src="./assets/img/submit-icon.png"
+            class="success-icon-message"
+            alt="Submit"
+          />
           }
           <span class="input-icon">
             <img src="./assets/img/input-icon.png" alt="Input-Icon" />
           </span>
         </div>
 
-      <div class="privacy-policy">
-        <div class="privacy-line">
+        <div class="privacy-policy">
+          <div class="privacy-line">
             <div class="privacy-text">
-          <!-- <img (click)="clickBox()" #checkBox="ngModel" [(ngModel)]="contactData.email" name="checkBox" [src]="clickBoxSrc"alt="Click-Box" /> -->
-          <input 
-          type="checkbox" 
-          id="privacyCheckbox" 
-          [(ngModel)]="isBoxClicked"  
-          name="privacyCheckbox" 
-          class="hidden-checkbox" 
-        />
-        <label for="privacyCheckbox">
-          <img [src]="isBoxClicked ? clickedBoxSrc : clickBoxSrc" alt="Checkbox" />
-        </label>
-          @if(this.switchlanguage.german){
-            <p class="ge-text">Ich habe die <a (click)="scrollToTop()" routerLink="/legal-notice" class="highlight">Datenschutzrichtlinie</a> gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.</p>
-          }@else {
-            <p>I've read the <a (click)="scrollToTop()" routerLink="/legal-notice" class="highlight">privacy policy</a> and agree to the processing of my data as outlined.</p>
-          }
+              <!-- <img (click)="clickBox()" #checkBox="ngModel" [(ngModel)]="contactData.email" name="checkBox" [src]="clickBoxSrc"alt="Click-Box" /> -->
+              <input
+                type="checkbox"
+                id="privacyCheckbox"
+                [(ngModel)]="isBoxClicked"
+                name="privacyCheckbox"
+                class="hidden-checkbox"
+              />
+              <label for="privacyCheckbox">
+                <img
+                  [src]="isBoxClicked ? clickedBoxSrc : clickBoxSrc"
+                  alt="Checkbox"
+                />
+              </label>
+              @if(this.switchlanguage.german){
+              <p class="ge-text">
+                Ich habe die
+                <a
+                  (click)="scrollToTop()"
+                  routerLink="/legal-notice"
+                  class="highlight"
+                  >Datenschutzrichtlinie</a
+                >
+                gelesen und stimme der darin beschriebenen Verarbeitung meiner
+                Daten zu.
+              </p>
+              }@else {
+              <p>
+                I've read the
+                <a
+                  (click)="scrollToTop()"
+                  routerLink="/legal-notice"
+                  class="highlight"
+                  >privacy policy</a
+                >
+                and agree to the processing of my data as outlined.
+              </p>
+              }
+            </div>
+            @if (contactForm.valid && !isBoxClicked) {
+            <span class="error-message">{{
+              "contact-form.errors.privacy-required" | translate
+            }}</span>
+            }
+            <button
+              type="submit"
+              [disabled]="!isBoxClicked || contactForm.invalid"
+            >
+              {{ "my-contact.send-button" | translate }}
+            </button>
+            @if (sendMessage) {
+            <span class="message-send">{{
+              "my-contact.send-confirmation" | translate
+            }}</span>
+            }
+          </div>
+          <div class="arrow-up">
+            <a (click)="navigateTo('#navbar')">
+              <img
+                (mouseover)="hoverArrow('up', true)"
+                (mouseout)="hoverArrow('up', false)"
+                [src]="upArrowSrc"
+                alt="Up-Arrow"
+              />
+            </a>
+          </div>
         </div>
-          @if (contactForm.valid && !isBoxClicked) {
-            <span class="error-message">{{ 'contact-form.errors.privacy-required' | translate }}</span>
-          }
-        <button type="submit" [disabled]="!isBoxClicked || contactForm.invalid">{{ 'my-contact.send-button' | translate }}</button>
-          @if (sendMessage) {
-            <span class="message-send">{{ 'my-contact.send-confirmation' | translate }}</span>
-          }
-        </div>
-        <div class="arrow-up">
-        <a href="#navbar">  
-        <img 
-            (mouseover)="hoverArrow('up', true)"
-            (mouseout)="hoverArrow('up', false)" 
-            [src]="upArrowSrc"alt="Up-Arrow">
-          </a>
-        </div>
-      </div>
-    </form>
+      </form>
     </div>
   </div>
-    <hr class="green-line" />
+  <hr class="green-line" />
 </section>
