@@ -28,8 +28,8 @@
     <a (click)="navigateTo('#about-me')">{{ "my-navbar.first" | translate }}</a>
     <a (click)="navigateTo('#my-skills')">{{ "my-navbar.second" | translate }}</a>
     <a (click)="navigateTo('#my-portfolio')">{{ "my-navbar.third" | translate }}</a>
-    <a class="hamburger-only" (click)="navigateTo('#my-reference')">{{ "my-navbar.fifth" | translate }}</a>
-    <a class="hamburger-only" (click)="navigateTo('#my-contact')">{{ "my-navbar.fourth" | translate }}</a>
+    <a class="hamburger-only" (click)="navigateTo('#my-reference')">{{ "my-navbar.fourth" | translate }}</a>
+    <a class="hamburger-only" (click)="navigateTo('#my-contact')">{{ "my-navbar.fifth" | translate }}</a>
   </div>
   <button class="hamburger" aria-label="Menu" (click)="toggleMenu()">
     <div class="icon-container" [class.rotate]="menuOpen">
