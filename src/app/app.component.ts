@@ -8,44 +8,36 @@ import AOS from 'aos';
 import {
   TranslateService,
   TranslatePipe,
-  TranslateDirective
-} from "@ngx-translate/core";
-import { ImprintComponent } from "./imprint/imprint.component";
-
-
+  TranslateDirective,
+} from '@ngx-translate/core';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, FooterComponent, NavbarComponent, TranslateDirective, ImprintComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    MainContentComponent,
+    FooterComponent,
+    NavbarComponent,
+    TranslateDirective,
+    ImprintComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
   title = 'portfolio';
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
-}
-// ngOnInit() {
-//   AOS.init({
-//     duration: 1000, 
-//     once: false,    
-//     offset: 100,
-//     // disable: true    
-//   });
-//   setTimeout(() => {
-//     AOS.refresh();
-//   }, 100); 
-// }
-ngAfterViewInit() {  
-  AOS.init({
-    duration: 1000,
-    once: false,
-    offset: 100,
-    // disable: window.innerWidth < 768  // Auf Mobile deaktivieren
-  });
-  setTimeout(() => AOS.refresh(), 500);
-}
+  }
+
+  ngAfterViewInit() {
+    AOS.init({ once: false, duration: 1000 });
+    setTimeout(() => AOS.refreshHard(), 500);
+    setTimeout(() => AOS.refreshHard(), 1500);
+  }
 }

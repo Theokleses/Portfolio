@@ -13,6 +13,12 @@ section {
   }
 }
 
+@media (min-width: 1500px) and (max-width: 1950px) {
+  .pd-bot {  
+    margin-top: -50px !important; 
+  }
+}
+
 .shadow-image {
   position: absolute;
   top: 0;
@@ -225,9 +231,6 @@ section {
 }
 
 @media (max-width: 752px) {
-  // .shadow-image {
-  //   margin-top: -350px;
-  // }
   .pd-bot {
     margin-top: 50px;
   }

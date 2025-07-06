@@ -120,7 +120,7 @@ export class LandPageComponent {
       case 'firefox':
         return this.hasBookmarksBar ? '0px' : '25px';
       default:
-        return this.hasBookmarksBar ? '-10px' : '23px';
+        return this.hasBookmarksBar ? '-13px' : '20px';
     }
   }
 
